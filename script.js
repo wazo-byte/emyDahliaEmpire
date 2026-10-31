@@ -1,105 +1,70 @@
+// Keep the existing WhatsApp contact destination from the original website.
 const WHATSAPP_NUMBER = "60162062223";
 
-const whatsappFloat = document.getElementById('whatsappFloat');
-if (whatsappFloat) {
-  whatsappFloat.href = `https://wa.me/${WHATSAPP_NUMBER}`;
-}
+const whatsappFloat = document.getElementById("whatsappFloat");
+if (whatsappFloat) whatsappFloat.href = `https://wa.me/${WHATSAPP_NUMBER}`;
 
-const mobileToggle = document.querySelector('.mobile-toggle');
-const nav = document.querySelector('.nav');
-
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.getElementById("mainNav");
 function closeMenu() {
-  if (!mobileToggle || !nav) return;
-
-  nav.classList.remove('open');
-  mobileToggle.setAttribute('aria-expanded', 'false');
-  mobileToggle.setAttribute('aria-label', 'Open menu');
+  if (!menuToggle || !nav) return;
+  nav.classList.remove("is-open");
+  menuToggle.setAttribute("aria-expanded", "false");
+  menuToggle.setAttribute("aria-label", "Open navigation");
 }
-
-if (mobileToggle && nav) {
-  mobileToggle.addEventListener('click', () => {
-    const isOpen = mobileToggle.getAttribute('aria-expanded') === 'true';
-    mobileToggle.setAttribute('aria-expanded', String(!isOpen));
-    mobileToggle.setAttribute('aria-label', isOpen ? 'Open menu' : 'Close menu');
-    nav.classList.toggle('open', !isOpen);
+if (menuToggle && nav) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+    menuToggle.setAttribute("aria-expanded", String(!isOpen));
+    menuToggle.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
+    nav.classList.toggle("is-open", !isOpen);
   });
-
-  nav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', closeMenu);
-  });
-
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      closeMenu();
-      mobileToggle.focus();
-    }
+  nav.querySelectorAll("a").forEach(link => link.addEventListener("click", closeMenu));
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") { closeMenu(); menuToggle.focus(); }
   });
 }
 
-document.querySelectorAll('[data-book]').forEach((link) => {
-  link.addEventListener('click', () => {
-    const intentSelect = document.getElementById('intent');
-    const detailsField = document.getElementById('details');
-
-    if (intentSelect) {
-      intentSelect.value = 'Order a book';
-    }
-
-    if (detailsField) {
-      detailsField.value = '';
-    }
+document.querySelectorAll("[data-book]").forEach(link => {
+  link.addEventListener("click", () => {
+    const intent = document.getElementById("intent");
+    const details = document.getElementById("details");
+    if (intent) intent.value = "Book enquiry";
+    if (details) details.value = `I would like to enquire about: ${link.dataset.book}.`;
+  });
+});
+document.querySelectorAll("[data-interest]").forEach(link => {
+  link.addEventListener("click", () => {
+    const intent = document.getElementById("intent");
+    const details = document.getElementById("details");
+    if (intent) intent.value = link.dataset.interest;
+    if (details) details.value = `I would like to know more about ${link.dataset.interest}.`;
   });
 });
 
-document.querySelectorAll('[data-service]').forEach((link) => {
-  link.addEventListener('click', () => {
-    const service = link.getAttribute('data-service');
-    const intentSelect = document.getElementById('intent');
-    const detailsField = document.getElementById('details');
-
-    if (intentSelect) {
-      intentSelect.value = service === 'Ghostwriting' ? 'Ghostwriting' : 'Consultation / writing guidance';
-    }
-
-    if (detailsField) {
-      detailsField.value = '';
-    }
-  });
-});
-
-const inquiryForm = document.getElementById('inquiryForm');
-const fallbackBox = document.getElementById('whatsappFallback');
-const manualLink = document.getElementById('manualLink');
-
-if (inquiryForm) {
-  inquiryForm.addEventListener('submit', (event) => {
+const form = document.getElementById("inquiryForm");
+const fallback = document.getElementById("whatsappFallback");
+const manualLink = document.getElementById("manualLink");
+if (form) {
+  form.addEventListener("submit", event => {
     event.preventDefault();
-
-    const data = new FormData(inquiryForm);
-    const name = String(data.get('name') || '').trim();
-    const intent = String(data.get('intent') || '');
-    const details = String(data.get('details') || '').trim();
-    const message = [
-      `Hello, I'd like to get in touch about ${intent.toLowerCase()}.`,
-      '',
-      `My name is ${name}.`,
-      '',
-      details,
-    ].join('\n');
+    if (!form.reportValidity()) return;
+    const data = new FormData(form);
+    const name = String(data.get("name") || "").trim();
+    const intent = String(data.get("intent") || "General enquiry");
+    const details = String(data.get("details") || "").trim();
+    const message = ["Assalamualaikum Emy Dahlia Empire,", "", `My name is ${name}.`, `I'm interested in: ${intent}.`, "", details].join("\n");
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-    const opened = window.open(url, '_blank');
-
-    if (opened) {
-      if (fallbackBox) fallbackBox.hidden = true;
-      inquiryForm.reset();
+    const popup = window.open(url, "_blank");
+    if (popup) {
+      popup.opener = null;
+      if (fallback) fallback.hidden = true;
+      form.reset();
     } else {
-      if (fallbackBox) fallbackBox.hidden = false;
+      if (fallback) fallback.hidden = false;
       if (manualLink) manualLink.href = url;
     }
   });
 }
-
-const currentYear = document.getElementById('currentYear');
-if (currentYear) {
-  currentYear.textContent = String(new Date().getFullYear());
-}
+const year = document.getElementById("currentYear");
+if (year) year.textContent = String(new Date().getFullYear());
