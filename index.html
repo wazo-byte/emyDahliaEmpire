@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ms">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,9 +19,14 @@
         <img class="brand-logo" src="assets/logo.jpeg" alt="">
         <span class="brand-name">EMY DAHLIA <b>EMPIRE</b></span>
       </a>
-      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mainNav"><span></span><span></span></button>
+      <div class="header-controls">
+        <div class="language-switcher" role="group" aria-label="Pilih bahasa / Choose language">
+          <button class="language-option" type="button" data-language="ms" aria-pressed="true">BM</button><span aria-hidden="true">|</span><button class="language-option" type="button" data-language="en" aria-pressed="false">EN</button>
+        </div>
+        <button class="menu-toggle" type="button" aria-label="Buka navigasi" aria-expanded="false" aria-controls="mainNav"><span></span><span></span></button>
+      </div>
       <nav class="nav" id="mainNav" aria-label="Main navigation">
-        <a href="#home">Home</a><a href="#about">About</a><a href="#journey">The Journey</a><a href="#books">The Books</a><a href="#wakaf">Wakaf Cahaya</a><a class="nav-cta" href="#contact">Get in touch</a>
+        <a href="#home" data-i18n="nav.home">Utama</a><a href="#about" data-i18n="nav.about">Tentang</a><a href="#journey" data-i18n="nav.journey">Perjalanan</a><a href="#books" data-i18n="nav.books">Buku-buku</a><a href="#wakaf" data-i18n="nav.wakaf">Wakaf Cahaya</a><a href="#bimbingan" data-i18n="nav.bimbingan">Bimbingan Penulis</a><a href="#ghostwrite" data-i18n="nav.ghostwrite">Ghost Writer</a><a class="nav-cta" href="#contact" data-i18n="nav.contact">Hubungi</a>
       </nav>
     </div>
   </header>
@@ -49,12 +54,33 @@
 
     <section class="quote-band"><p>“Light does not come from us. It comes from Allah.<br><em>Choose His Light.</em>”</p><span>✧</span></section>
 
-    <section class="section" id="about"><div class="container about-grid">
-      <div class="about-visual"><img src="buku1.jpeg" alt="Ya Allah Pilihlah Mereka, a title from the Emy Dahlia Empire bookshelf" loading="lazy"><span class="image-note">A life shaped by faith</span></div>
-      <div class="about-copy"><p class="eyebrow">01 — The heart behind the stories</p><h2>Some journeys begin with a dream.<br><em>Ours began with Allah.</em></h2><div class="ornament ornament-left"><span></span><b>✧</b><span></span></div>
-        <p>Some journeys begin with a dream. Others begin with a carefully written plan. Siri Cahaya began through the quiet lessons of life — through moments of trial, patience, gratitude and the reminders that Allah’s light is never far away.</p>
-        <p>Emy Dahlia Empire brings these reflections into stories and books, inviting readers to pause, find meaning and carry a little more light into their own journeys.</p><a class="text-link" href="#journey">Read the story <span>→</span></a>
+    <section class="section about-story" id="about"><div class="container about-grid">
+      <div class="about-copy">
+        <p class="eyebrow" data-i18n="about.eyebrow">02 — Tentang: Kisah Saya</p>
+        <h2 data-i18n="about.title">Dari pengalaman lahirlah tulisan. Dari perjalanan lahirlah Siri Cahaya.</h2>
+        <div class="ornament ornament-left"><span></span><b>✧</b><span></span></div>
+        <p data-i18n="about.body1">Saya menulis bukan sekadar untuk menceritakan kehidupan sendiri, tetapi untuk mencari makna di sebalik setiap perjalanan yang Allah izinkan berlaku.</p>
+        <p data-i18n="about.body2">Ada pengalaman yang kelihatan biasa ketika dilalui, namun setelah direnungi kembali, ia membuka lapisan makna yang tidak pernah saya sedari sebelumnya.</p>
+        <p data-i18n="about.body3">Daripada doa, ujian keluarga, pertemuan, kehilangan, pencarian dan kesyukuran, lahirlah Siri Cahaya. Sebuah perjalanan yang bermula sebagai kisah peribadi, tetapi akhirnya saya sedari bahawa rasa yang dilalui mungkin turut menjadi sebahagian daripada kisah orang lain.</p>
+        <p data-i18n="about.body4">Kerana setiap takdir mempunyai ceritanya, dan setiap cerita mempunyai ruang untuk kita mengambil ibrah.</p>
+        <p class="about-closing" data-i18n="about.closing">Empat naskhah, empat perjalanan, satu amanah.</p>
+        <div class="about-actions"><a class="button button-gold" href="#journey" data-i18n="about.read">Baca Kisah Saya <span>→</span></a><a class="button button-outline" href="#author-profile" data-i18n="about.profile">Lihat Profil Penulis</a></div>
       </div>
+      <div class="about-visual"><img src="assets/kisah.jpeg" alt="Emy Dahlia writing at a desk" loading="lazy"><span class="image-note" data-i18n="about.imageNote">Dari pengalaman lahirlah tulisan</span></div>
+    </div></section>
+
+    <section class="author-profile-section" id="author-profile"><div class="container author-profile-grid">
+      <div class="author-profile-copy">
+        <p class="eyebrow" data-i18n="profile.eyebrow">03 — Profil penulis</p>
+        <h2 data-i18n="profile.title">Profil Penulis Rasmi</h2>
+        <p class="profile-subtitle" data-i18n="profile.subtitle">Empat naskhah, empat perjalanan, satu amanah.</p>
+        <div class="ornament ornament-left"><span></span><b>✧</b><span></span></div>
+        <p data-i18n="profile.description1">Kenali Emy Dahlia Burhanuddin melalui perjalanan penulisan, karya-karya Siri Cahaya dan pengalaman kehidupan yang menjadi asas kepada penulisan beliau.</p>
+        <p data-i18n="profile.description2">Profil ini menghimpunkan pengenalan penulis, sinopsis rasmi empat naskhah Siri Cahaya, suara pembaca, jejak karya di perpustakaan serta inisiatif Wakaf Sudut Cahaya.</p>
+        <p data-i18n="profile.description3">Sebuah dokumen pengenalan rasmi untuk pembaca, perpustakaan, institusi, media dan rakan kolaborasi.</p>
+        <div class="author-profile-actions"><button class="button button-gold" type="button" id="openProfileReader" data-i18n="profile.read">Baca Profil Penulis <span>↗</span></button><a class="button button-light-outline" href="assets/profilPenulis.pdf" download data-i18n="profile.download">Muat Turun PDF <span>↓</span></a></div>
+      </div>
+      <div class="profile-cover-wrap"><img src="assets/coverProfilePenulis.png" alt="Kulit depan Profil Penulis Emy Dahlia Burhanuddin" loading="lazy"></div>
     </div></section>
 
     <section class="journey-section" id="journey"><div class="journey-overlay"></div><div class="container journey-content">
@@ -65,10 +91,10 @@
     <section class="section books-section" id="books"><div class="container">
       <div class="section-heading"><p class="eyebrow">03 — The bookshelf</p><h2>Every book carries <em>a light.</em></h2><p>Words and reflections for the chapters that shape us.</p></div>
       <div class="book-grid">
-        <article class="book-card"><div class="book-cover"><img src="buku1.jpeg" alt="Ya Allah Pilihlah Mereka book cover" loading="lazy"></div><p class="book-category">Siri Cahaya</p><h3>Ya Allah Pilihlah Mereka</h3><a class="book-link" href="#contact" data-book="Ya Allah Pilihlah Mereka">Enquire about this book <span>↗</span></a></article>
-        <article class="book-card"><div class="book-cover"><img src="buku2.jpeg" alt="Cahaya Sebatang Tongkat book cover" loading="lazy"></div><p class="book-category">Siri Cahaya</p><h3>Cahaya Sebatang Tongkat</h3><a class="book-link" href="#contact" data-book="Cahaya Sebatang Tongkat">Enquire about this book <span>↗</span></a></article>
-        <article class="book-card"><div class="book-cover"><img src="buku3.jpeg" alt="Perban Cahaya book cover" loading="lazy"></div><p class="book-category">Siri Cahaya</p><h3>Perban Cahaya</h3><a class="book-link" href="#contact" data-book="Perban Cahaya">Enquire about this book <span>↗</span></a></article>
-        <article class="book-card"><div class="book-cover"><img src="buku4.jpeg" alt="Mulut, Telinga dan Hati book cover" loading="lazy"></div><p class="book-category">Reflections</p><h3>Mulut, Telinga dan Hati</h3><a class="book-link" href="#contact" data-book="Mulut, Telinga dan Hati">Enquire about this book <span>↗</span></a></article>
+        <article class="book-card"><div class="book-cover"><img src="assets/buku1.jpeg" alt="Ya Allah Pilihlah Mereka book cover" loading="lazy"></div><p class="book-category">Siri Cahaya</p><h3>Ya Allah Pilihlah Mereka</h3><a class="book-link" href="#contact" data-book="Ya Allah Pilihlah Mereka">Enquire about this book <span>↗</span></a></article>
+        <article class="book-card"><div class="book-cover"><img src="assets/buku2.jpeg" alt="Cahaya Sebatang Tongkat book cover" loading="lazy"></div><p class="book-category">Siri Cahaya</p><h3>Cahaya Sebatang Tongkat</h3><a class="book-link" href="#contact" data-book="Cahaya Sebatang Tongkat">Enquire about this book <span>↗</span></a></article>
+        <article class="book-card"><div class="book-cover"><img src="assets/buku3.jpeg" alt="Perban Cahaya book cover" loading="lazy"></div><p class="book-category">Siri Cahaya</p><h3>Perban Cahaya</h3><a class="book-link" href="#contact" data-book="Perban Cahaya">Enquire about this book <span>↗</span></a></article>
+        <article class="book-card"><div class="book-cover"><img src="assets/buku4.jpeg" alt="Mulut, Telinga dan Hati book cover" loading="lazy"></div><p class="book-category">Reflections</p><h3>Mulut, Telinga dan Hati</h3><a class="book-link" href="#contact" data-book="Mulut, Telinga dan Hati">Enquire about this book <span>↗</span></a></article>
       </div>
     </div></section>
 
@@ -76,13 +102,26 @@
       <div class="wakaf-art" aria-hidden="true"><span class="arch arch-one"></span><span class="arch arch-two"></span><div class="book-stack"><i></i><i></i><i></i></div><b>✧</b></div>
     </div></section>
 
+    <section class="section services-section" id="bimbingan"><div class="container">
+      <div class="section-heading"><p class="eyebrow" data-i18n="services.eyebrow">Ruang berkarya</p><h2 data-i18n="services.title">Bina cerita yang <em>bermakna.</em></h2><p data-i18n="services.intro">Setiap cerita bermula dengan satu idea. Pilih sokongan yang sesuai untuk membawa idea anda menjadi naskhah.</p></div>
+      <div class="services-grid">
+        <article class="service-card"><span class="service-number">01</span><p class="service-label" data-i18n="guidance.label">Bimbingan Penulis</p><h3 data-i18n="guidance.title">Temui suara dan arah tulisan anda.</h3><p data-i18n="guidance.body">Sesi bimbingan untuk menyusun idea, membina struktur, menguatkan watak dan menjadikan proses menulis lebih jelas serta terarah.</p><ul><li data-i18n="guidance.item1">Idea dan konsep cerita</li><li data-i18n="guidance.item2">Struktur dan aliran bab</li><li data-i18n="guidance.item3">Semakan manuskrip</li></ul><a class="button button-outline" href="#contact" data-interest="Bimbingan Penulis" data-i18n="guidance.cta">Tanya tentang bimbingan <span>→</span></a></article>
+        <article class="service-card service-card-dark" id="ghostwrite"><span class="service-number">02</span><p class="service-label" data-i18n="ghost.label">Ghost Writer</p><h3 data-i18n="ghost.title">Biarkan cerita anda ditulis dengan jiwa.</h3><p data-i18n="ghost.body">Perkhidmatan penulisan dari idea awal hingga manuskrip lengkap, dengan pendekatan yang menjaga suara, visi dan kerahsiaan anda.</p><ul><li data-i18n="ghost.item1">Penulisan buku dan memoir</li><li data-i18n="ghost.item2">Artikel dan kandungan jenama</li><li data-i18n="ghost.item3">Kerahsiaan dan kolaborasi</li></ul><a class="button button-gold" href="#contact" data-interest="Ghost Writer" data-i18n="ghost.cta">Bincang projek anda <span>→</span></a></article>
+      </div>
+    </div></section>
+
     <section class="section contact-section" id="contact"><div class="container contact-grid">
       <div class="contact-copy"><p class="eyebrow">A new chapter begins here</p><h2>Let’s begin<br><em>a conversation.</em></h2><p>For book enquiries, collaboration, media and Wakaf Cahaya, send us a message. We would love to hear from you.</p><div class="contact-detail"><span>✧</span><div><small>Connect with us</small><strong>Emy Dahlia Empire</strong></div></div></div>
-      <form id="inquiryForm" class="contact-form"><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" required placeholder="Name"><label for="intent">I’m interested in</label><select id="intent" name="intent" required><option value="">Please select</option><option>Book enquiry</option><option>Wakaf Cahaya</option><option>Collaboration</option><option>Media &amp; podcast</option><option>General enquiry</option></select><label for="details">Your message</label><textarea id="details" name="details" rows="4" required placeholder="Tell us a little more..."></textarea><button class="button button-dark" type="submit">Send a message <span>↗</span></button><p class="form-note">You’ll review your message in WhatsApp before sending.</p><p id="whatsappFallback" class="fallback-link" role="status" hidden>WhatsApp didn’t open? <a id="manualLink" href="#" target="_blank" rel="noopener">Open your message here.</a></p></form>
+      <form id="inquiryForm" class="contact-form"><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" required placeholder="Name"><label for="intent">I’m interested in</label><select id="intent" name="intent" required><option value="">Please select</option><option>Book enquiry</option><option>Bimbingan Penulis</option><option>Ghost Writer</option><option>Wakaf Cahaya</option><option>Collaboration</option><option>Media &amp; podcast</option><option>General enquiry</option></select><label for="details">Your message</label><textarea id="details" name="details" rows="4" required placeholder="Tell us a little more..."></textarea><button class="button button-dark" type="submit">Send a message <span>↗</span></button><p class="form-note">You’ll review your message in WhatsApp before sending.</p><p id="whatsappFallback" class="fallback-link" role="status" hidden>WhatsApp didn’t open? <a id="manualLink" href="#" target="_blank" rel="noopener">Open your message here.</a></p></form>
     </div></section>
   </main>
 
+  <dialog class="pdf-reader" id="profileReader" aria-labelledby="profileReaderTitle">
+    <div class="pdf-reader-bar"><h2 id="profileReaderTitle" data-i18n="reader.title">Profil Penulis Rasmi</h2><div><a class="reader-open-tab" href="assets/profilPenulis.pdf" target="_blank" rel="noopener" data-i18n="reader.open">Buka skrin penuh ↗</a><button class="reader-close" type="button" data-close-profile-reader data-i18n="reader.close">Tutup</button></div></div>
+    <object class="pdf-reader-frame" data="assets/profilPenulis.pdf#view=FitH" type="application/pdf"><p data-i18n="reader.fallback">Pelayar anda tidak dapat memaparkan PDF ini. <a href="assets/profilPenulis.pdf" target="_blank" rel="noopener">Buka PDF</a>.</p></object>
+  </dialog>
+
   <footer class="site-footer"><div class="container footer-top"><a class="brand footer-brand" href="#home"><img class="brand-logo" src="assets/logo.jpeg" alt=""><span class="brand-name">EMY DAHLIA <b>EMPIRE</b></span></a><p>May every story lead us closer to His light.</p><a class="back-top" href="#home">Back to top ↑</a></div><div class="container footer-bottom"><span>© <span id="currentYear">2026</span> Emy Dahlia Empire. All rights reserved.</span><span>Faith · Hope · Reflection</span></div></footer>
-  <a class="whatsapp-float" id="whatsappFloat" href="#" target="_blank" rel="noopener" aria-label="Chat with Emy Dahlia Empire on WhatsApp">◔</a>
+  <a class="whatsapp-float" id="whatsappFloat" href="#" target="_blank" rel="noopener" aria-label="Chat with Emy Dahlia Empire on WhatsApp"><img src="assets/wsIcon.png" alt=""></a>
 </body>
 </html>
