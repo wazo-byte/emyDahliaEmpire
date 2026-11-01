@@ -78,7 +78,7 @@
         <p data-i18n="profile.description1">Kenali Emy Dahlia Burhanuddin melalui perjalanan penulisan, karya-karya Siri Cahaya dan pengalaman kehidupan yang menjadi asas kepada penulisan beliau.</p>
         <p data-i18n="profile.description2">Profil ini menghimpunkan pengenalan penulis, sinopsis rasmi empat naskhah Siri Cahaya, suara pembaca, jejak karya di perpustakaan serta inisiatif Wakaf Sudut Cahaya.</p>
         <p data-i18n="profile.description3">Sebuah dokumen pengenalan rasmi untuk pembaca, perpustakaan, institusi, media dan rakan kolaborasi.</p>
-        <div class="author-profile-actions"><button class="button button-gold" type="button" id="openProfileReader" data-i18n="profile.read">Baca Profil Penulis <span>↗</span></button><a class="button button-light-outline" href="assets/profilPenulis.pdf" download data-i18n="profile.download">Muat Turun PDF <span>↓</span></a></div>
+        <div class="author-profile-actions"><button class="button button-gold" type="button" id="openProfileReader" data-i18n="profile.read" onclick="document.getElementById('profileReader').showModal()">Baca Profil Penulis <span>↗</span></button><a class="button button-light-outline" href="/download-profil-penulis" download="Profil-Penulis-Emy-Dahlia-Burhanuddin.pdf" data-i18n="profile.download">Muat Turun PDF <span>↓</span></a></div>
       </div>
       <div class="profile-cover-wrap"><img src="assets/coverProfilePenulis.png" alt="Kulit depan Profil Penulis Emy Dahlia Burhanuddin" loading="lazy"></div>
     </div></section>
@@ -117,7 +117,7 @@
   </main>
 
   <dialog class="pdf-reader" id="profileReader" aria-labelledby="profileReaderTitle">
-    <div class="pdf-reader-bar"><h2 id="profileReaderTitle" data-i18n="reader.title">Profil Penulis Rasmi</h2><div><a class="reader-open-tab" href="assets/profilPenulis.pdf" target="_blank" rel="noopener" data-i18n="reader.open">Buka skrin penuh ↗</a><button class="reader-close" type="button" data-close-profile-reader data-i18n="reader.close">Tutup</button></div></div>
+    <div class="pdf-reader-bar"><h2 id="profileReaderTitle" data-i18n="reader.title">Profil Penulis Rasmi</h2><div><a class="reader-open-tab" href="assets/profilPenulis.pdf" target="_blank" rel="noopener" data-i18n="reader.open">Buka skrin penuh ↗</a><button class="reader-close" type="button" data-close-profile-reader data-i18n="reader.close" onclick="document.getElementById('profileReader').close()">Tutup</button></div></div>
     <object class="pdf-reader-frame" data="assets/profilPenulis.pdf#view=FitH" type="application/pdf"><p data-i18n="reader.fallback">Pelayar anda tidak dapat memaparkan PDF ini. <a href="assets/profilPenulis.pdf" target="_blank" rel="noopener">Buka PDF</a>.</p></object>
   </dialog>
 
