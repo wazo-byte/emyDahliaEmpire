@@ -28,3 +28,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 @media(max-width:680px){.nav a.is-current::after{bottom:6px}.about-story{padding-bottom:0}.about-story .about-grid{display:flex;flex-direction:column;width:min(var(--max),calc(100% - 36px));padding-bottom:42px}.about-story .about-copy{max-width:none;padding:50px 0 0}.about-story .about-copy .eyebrow{font-size:10px;margin-bottom:21px}.about-story .about-copy h2{font-size:clamp(43px,12.6vw,58px)}.about-story .about-copy>p:not(.eyebrow):not(.about-closing){font-size:17px;line-height:1.52}.about-story .about-visual{order:2;margin-top:38px}.about-story .about-visual img{height:430px;object-position:62% center}.about-story .about-closing{position:relative;order:3;left:auto;bottom:auto;width:auto;padding:38px 10px 0;font-size:24px!important}.about-story .about-closing::after{bottom:-3px}.about-story .about-actions{gap:11px}.about-story .button{flex:1;padding-inline:12px}}
 .services-grid{grid-template-columns:repeat(2,1fr)}
 @media(max-width:680px){.services-grid{grid-template-columns:1fr;gap:18px}.service-card{padding:34px 25px 28px}.service-number{top:19px;right:20px}.service-card h3{font-size:39px}.service-card>p:not(.service-label){font-size:16px}.service-card .button{width:100%}}
+
+/* Keep the closing quote decorative without stretching it with whitespace. */
+.about-story .about-closing{display:flex;align-items:center;justify-content:center;gap:16px;left:38%;width:58%;padding:20px 34px 0}
+.about-story .about-closing::before,
+.about-story .about-closing::after{position:static;display:block;flex:0 0 auto;max-width:none;overflow:visible;color:#a47a3e;font:400 42px/1 var(--serif);letter-spacing:normal;white-space:normal;pointer-events:none}
+.about-story .about-closing::before{content:"“";margin:0}
+.about-story .about-closing::after{content:"”";margin:0}
+@media(max-width:1100px){.about-story .about-closing{left:32%;width:67%}}
+@media(max-width:680px){.about-story .about-closing{display:block;left:auto;width:auto;padding:38px 28px 0}.about-story .about-closing::before,.about-story .about-closing::after{position:absolute;font-size:36px}.about-story .about-closing::before{top:30px;left:8px}.about-story .about-closing::after{right:8px;bottom:-4px}}
