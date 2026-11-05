@@ -21,7 +21,7 @@ const translations = {
     "nav.aria": "Navigasi utama",
     "wakaf.pageTitle": "Wakaf Sudut Cahaya | Emy Dahlia Empire",
     "services.pageTitle": "Perkhidmatan & Hubungi | Emy Dahlia Empire",
-    "nav.home": "Utama", "nav.story": "Kisah Saya", "nav.books": "Siri Cahaya", "nav.wakaf": "Wakaf", "nav.services": "Perkhidmatan", "nav.contact": "Hubungi", "footer.home": "Kembali ke laman utama",
+    "nav.home": "Utama", "nav.story": "Kisah Saya", "nav.books": "Siri Cahaya", "nav.wakaf": "Wakaf Sudut Cahaya", "nav.contact": "Hubungi", "footer.home": "Kembali ke laman utama", "footer.copyright": "© 2026 Emy Dahlia Empire. Hak cipta terpelihara.", "books.pageTitle": "Siri Cahaya | Emy Dahlia Empire",
     "wakaf.contributors": "Pewakaf",
     "wakaf.filled": "Lokasi diisi",
     "wakaf.waiting": "Lokasi menanti",
@@ -36,6 +36,7 @@ const translations = {
     "wakaf.closing": "Wakaf Sudut Cahaya memperluas perjalanan buku daripada pemilikan individu kepada manfaat bersama.",
     "wakaf.cta": "Hubungi untuk kolaborasi →",
     "wakaf.record": "Rekod sehingga 25 Ogos 2026.",
+    "libraries.eyebrow": "Jejak Siri Cahaya", "libraries.title": "Di rak <em>perpustakaan.</em>", "libraries.intro": "Karya-karya Siri Cahaya tersedia untuk pembaca di perpustakaan terpilih.", "libraries.one": "Perpustakaan Awam Raja Tun Uda", "libraries.two": "Perpustakaan Awam Pahang", "libraries.three": "Perpustakaan Terengganu",
     "placeholder.activity": "[Foto Aktiviti Wakaf Sudut Cahaya]",
     "services.eyebrow": "Emy Dahlia Empire",
     "services.title": "Perkhidmatan & Hubungi",
@@ -70,6 +71,7 @@ const translations = {
     "wakaf.closing": "Wakaf Sudut Cahaya extends the journey of books beyond individual ownership into shared community benefit.",
     "wakaf.cta": "Contact us to collaborate →",
     "wakaf.record": "Record as of 25 August 2026.",
+    "libraries.eyebrow": "Siri Cahaya's journey", "libraries.title": "On library <em>shelves.</em>", "libraries.intro": "Siri Cahaya works are available to readers at selected libraries.", "libraries.one": "Raja Tun Uda Public Library", "libraries.two": "Pahang Public Library", "libraries.three": "Terengganu Library",
     "placeholder.activity": "[Wakaf Sudut Cahaya Activity Photo]",
     "services.eyebrow": "Emy Dahlia Empire",
     "services.title": "Services & Contact",
@@ -85,7 +87,7 @@ const translations = {
     "contact.eyebrow": "Contact",
     "contact.title": "Emy Dahlia Empire",
     "contact.note": "For enquiries or collaboration, please contact us through our official social media accounts.",
-    "nav.home": "Home", "nav.story": "My Story", "nav.books": "Siri Cahaya", "nav.wakaf": "Wakaf", "nav.services": "Services", "nav.contact": "Contact", "footer.home": "Back to home"
+    "nav.home": "Home", "nav.story": "My Story", "nav.books": "Siri Cahaya", "nav.wakaf": "Wakaf Sudut Cahaya", "nav.contact": "Contact", "footer.home": "Back to home", "footer.copyright": "© 2026 Emy Dahlia Empire. All rights reserved.", "books.pageTitle": "Siri Cahaya | Emy Dahlia Empire"
   }
 };
 
