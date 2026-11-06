@@ -16,12 +16,12 @@ const wakafData = {
   ]
 };
 
-const translations = {
+const pageTranslations = {
   ms: {
     "nav.aria": "Navigasi utama",
     "wakaf.pageTitle": "Wakaf Sudut Cahaya | Emy Dahlia Empire",
-    "services.pageTitle": "Perkhidmatan & Hubungi | Emy Dahlia Empire",
-    "nav.home": "Utama", "nav.story": "Kisah Saya", "nav.books": "Siri Cahaya", "nav.wakaf": "Wakaf Sudut Cahaya", "nav.contact": "Hubungi", "footer.home": "Kembali ke laman utama", "footer.copyright": "© 2026 Emy Dahlia Empire. Hak cipta terpelihara.", "books.pageTitle": "Siri Cahaya | Emy Dahlia Empire",
+    "services.pageTitle": "Hubungi | Emy Dahlia Empire",
+    "nav.home": "Utama", "nav.story": "Kisah Saya", "nav.books": "Karya", "nav.wakaf": "Wakaf", "nav.contact": "Hubungi", "footer.home": "Kembali ke laman utama", "footer.copyright": "© 2026 Emy Dahlia Empire. Hak cipta terpelihara.", "books.pageTitle": "Siri Cahaya | Emy Dahlia Empire",
     "wakaf.contributors": "Pewakaf",
     "wakaf.filled": "Lokasi diisi",
     "wakaf.waiting": "Lokasi menanti",
@@ -52,11 +52,12 @@ const translations = {
     "contact.eyebrow": "Hubungi",
     "contact.title": "Emy Dahlia Empire",
     "contact.note": "Untuk pertanyaan atau kolaborasi, sila hubungi melalui akaun media sosial rasmi kami."
+    ,"books.enquire": "Tanya tentang buku ini <span>↗</span>"
   },
   en: {
     "nav.aria": "Main navigation",
     "wakaf.pageTitle": "Wakaf Sudut Cahaya | Emy Dahlia Empire",
-    "services.pageTitle": "Services & Contact | Emy Dahlia Empire",
+    "services.pageTitle": "Contact | Emy Dahlia Empire",
     "wakaf.contributors": "Contributors",
     "wakaf.filled": "Locations filled",
     "wakaf.waiting": "Locations awaiting sponsorship",
@@ -87,38 +88,13 @@ const translations = {
     "contact.eyebrow": "Contact",
     "contact.title": "Emy Dahlia Empire",
     "contact.note": "For enquiries or collaboration, please contact us through our official social media accounts.",
-    "nav.home": "Home", "nav.story": "My Story", "nav.books": "Siri Cahaya", "nav.wakaf": "Wakaf Sudut Cahaya", "nav.contact": "Contact", "footer.home": "Back to home", "footer.copyright": "© 2026 Emy Dahlia Empire. All rights reserved.", "books.pageTitle": "Siri Cahaya | Emy Dahlia Empire"
+    "books.enquire": "Enquire about this book <span>↗</span>",
+    "nav.home": "Home", "nav.story": "My Story", "nav.books": "Books", "nav.wakaf": "Community", "nav.contact": "Contact", "footer.home": "Back to home", "footer.copyright": "© 2026 Emy Dahlia Empire. All rights reserved.", "books.pageTitle": "Siri Cahaya | Emy Dahlia Empire"
   }
 };
 
-function applyLanguage(language) {
-  const locale = translations[language] ? language : "ms";
-  const dictionary = translations[locale];
-
-  document.documentElement.lang = locale;
-  const pageTitleKey = document.documentElement.dataset.pageTitle;
-  const pageTitle = pageTitleKey ? dictionary[pageTitleKey] : null;
-  if (pageTitle) document.title = pageTitle;
-
-  document.querySelectorAll("[data-i18n]").forEach((element) => {
-    const value = dictionary[element.dataset.i18n];
-    if (value) element.innerHTML = value;
-  });
-
-  document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
-    const value = dictionary[element.dataset.i18nAriaLabel];
-    if (value) element.setAttribute("aria-label", value);
-  });
-
-  document.querySelectorAll(".language-option").forEach((button) => {
-    button.setAttribute(
-      "aria-pressed",
-      String(button.dataset.language === locale)
-    );
-  });
-
-  localStorage.setItem("emyDahliaLanguage", locale);
-}
+Object.assign(translations.ms, pageTranslations.ms);
+Object.assign(translations.en, pageTranslations.en);
 
 function renderWakaf() {
   const stats = document.querySelector("[data-wakaf-stats]");
