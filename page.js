@@ -5,14 +5,19 @@ const wakafData = {
     ["25", "waiting"]
   ],
   locations: [
+    "Bukit Rimau",
+    "Seksyen 13 Shah Alam",
+    "Damansara Damai",
     "Tropicana Aman",
+    "Bukit Jalil",
+    "Equine",
     "Putrajaya",
+    "Putra Perdana",
     "Bandar Enstek",
-    "Bukit Rimau 24 Jam",
-    "Denai Puchong 24 Jam",
-    "Damansara Damai 24 Jam",
+    "Sendayan",
+    "Setia Alam",
     "Sri Gombak",
-    "Seksyen 13 Shah Alam 24 Jam"
+    "Wangsa Maju"
   ]
 };
 
