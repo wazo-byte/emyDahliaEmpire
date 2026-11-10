@@ -26,7 +26,7 @@ const pageTranslations = {
     "nav.aria": "Navigasi utama",
     "wakaf.pageTitle": "Wakaf Sudut Cahaya | Emy Dahlia Empire",
     "services.pageTitle": "Hubungi | Emy Dahlia Empire",
-    "nav.home": "Utama", "nav.story": "Kisah Saya", "nav.books": "Karya", "nav.wakaf": "Wakaf", "nav.contact": "Hubungi", "footer.home": "Kembali ke laman utama", "footer.copyright": "© 2026 Emy Dahlia Empire. Hak cipta terpelihara.", "books.pageTitle": "Siri Cahaya | Emy Dahlia Empire",
+    "nav.home": "Utama", "nav.story": "Kisah Saya", "nav.profile": "Profil Penulis", "nav.books": "Karya", "nav.wakaf": "Wakaf", "nav.sofri": "Capt. Sofri", "nav.contact": "Hubungi", "footer.home": "Kembali ke laman utama", "footer.message": "Semoga setiap cerita mendekatkan kita kepada cahaya-Nya.", "footer.social": "Ikuti kami", "footer.top": "Kembali ke atas ↑", "footer.copyright": "© <span id=\"currentYear\">2026</span> Emy Dahlia Empire. Hak cipta terpelihara.", "footer.values": "Iman · Harapan · Renungan", "books.pageTitle": "Siri Cahaya | Emy Dahlia Empire",
     "wakaf.contributors": "Pewakaf",
     "wakaf.filled": "Lokasi diisi",
     "wakaf.waiting": "Lokasi menanti",
@@ -94,7 +94,7 @@ const pageTranslations = {
     "contact.title": "Emy Dahlia Empire",
     "contact.note": "For enquiries or collaboration, please contact us through our official social media accounts.",
     "books.enquire": "Enquire about this book <span>↗</span>",
-    "nav.home": "Home", "nav.story": "My Story", "nav.books": "Books", "nav.wakaf": "Community", "nav.contact": "Contact", "footer.home": "Back to home", "footer.copyright": "© 2026 Emy Dahlia Empire. All rights reserved.", "books.pageTitle": "Siri Cahaya | Emy Dahlia Empire"
+    "nav.home": "Home", "nav.story": "My Story", "nav.profile": "Author Profile", "nav.books": "Books", "nav.wakaf": "Community", "nav.sofri": "Capt. Sofri", "nav.contact": "Contact", "footer.home": "Back to home", "footer.message": "May every story lead us closer to His light.", "footer.social": "Follow us", "footer.top": "Back to top ↑", "footer.copyright": "© <span id=\"currentYear\">2026</span> Emy Dahlia Empire. All rights reserved.", "footer.values": "Faith · Hope · Reflection", "books.pageTitle": "Siri Cahaya | Emy Dahlia Empire"
   }
 };
 
@@ -125,23 +125,10 @@ document.addEventListener("DOMContentLoaded", () => {
   renderWakaf();
 
   const language = localStorage.getItem("emyDahliaLanguage") || "ms";
-  applyLanguage(language);
+  setLanguage(language);
 
   document.querySelectorAll(".language-option").forEach((button) => {
-    button.addEventListener("click", () => applyLanguage(button.dataset.language));
+    button.addEventListener("click", () => setLanguage(button.dataset.language));
   });
 
-  const menuToggle = document.querySelector(".menu-toggle");
-  const nav = document.getElementById("pageNav");
-  if (menuToggle && nav) {
-    menuToggle.addEventListener("click", () => {
-      const open = menuToggle.getAttribute("aria-expanded") === "true";
-      menuToggle.setAttribute("aria-expanded", String(!open));
-      nav.classList.toggle("is-open", !open);
-    });
-    nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
-      nav.classList.remove("is-open");
-      menuToggle.setAttribute("aria-expanded", "false");
-    }));
-  }
 });

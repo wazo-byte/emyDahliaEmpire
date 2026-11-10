@@ -2,7 +2,7 @@ const WHATSAPP_NUMBER = "601158883287";
 
 const translations = {
   ms: {
-    "nav.home": "Utama", "nav.story": "Kisah Saya", "nav.books": "Karya", "nav.wakaf": "Wakaf", "nav.contact": "Hubungi", "nav.about": "Tentang", "nav.biography": "Biografi", "nav.reviews": "Suara Pembaca", "nav.libraries": "Perpustakaan", "nav.journey": "Perjalanan", "nav.services": "Perkhidmatan", "nav.bimbingan": "Bimbingan Penulis", "nav.ghostwrite": "Ghost Writer", "nav.aria": "Navigasi utama", "values.aria": "Nilai-nilai kami",
+    "nav.home": "Utama", "nav.story": "Kisah Saya", "nav.profile": "Profil Penulis", "nav.books": "Karya", "nav.wakaf": "Wakaf", "nav.sofri": "Capt. Sofri", "nav.contact": "Hubungi", "nav.about": "Tentang", "nav.biography": "Biografi", "nav.reviews": "Suara Pembaca", "nav.libraries": "Perpustakaan", "nav.journey": "Perjalanan", "nav.services": "Perkhidmatan", "nav.bimbingan": "Bimbingan Penulis", "nav.ghostwrite": "Ghost Writer", "nav.aria": "Navigasi utama", "values.aria": "Nilai-nilai kami",
     "journey.eyebrow": "Perjalanan", "journey.title": "Setiap perjalanan<br>meninggalkan cahaya <em>di belakang.</em>", "journey.body": "Tidak setiap bab mudah untuk ditulis. Ada yang lahir melalui kesabaran, ada yang melalui air mata, dan ada yang memerlukan keberanian untuk bermula semula. Namun setiap langkah boleh mendekatkan kita kepada Dia yang mengetahui keseluruhan cerita.",
     "books.pageTitle": "Siri Cahaya | Emy Dahlia Empire", "books.eyebrow": "Rak buku", "books.title": "Setiap buku membawa <em>cahaya.</em>", "books.intro": "Kata-kata dan renungan untuk bab-bab yang membentuk diri kita.", "books.category": "Siri Cahaya", "books.reflections": "Renungan", "books.enquire": "Tanya tentang buku ini <span>↗</span>", "books.book1Alt": "Kulit buku Ya Allah Pilihlah Mereka", "books.book2Alt": "Kulit buku Cahaya Sebatang Tongkat", "books.book3Alt": "Kulit buku Perban Cahaya", "books.book4Alt": "Kulit buku Mulut, Telinga dan Hati",
     "wakaf.eyebrow": "Hadiah yang terus memberi", "wakaf.title": "Kongsikan cahaya.<br><em>Teruskan manfaatnya.</em>", "wakaf.body": "Wakaf Cahaya ialah satu ajakan untuk berkongsi bacaan yang bermanfaat dan peringatan yang bermakna. Sebuah buku boleh pergi lebih jauh daripada yang kita bayangkan, dan tiba di hati yang tepat pada waktunya.", "wakaf.cta": "Tanya tentang Wakaf Cahaya <span>→</span>",
@@ -21,7 +21,7 @@ const translations = {
     "services.eyebrow": "Ruang berkarya", "services.title": "Bina cerita yang <em>bermakna.</em>", "services.intro": "Setiap cerita bermula dengan satu idea. Pilih sokongan yang sesuai untuk membawa idea anda menjadi naskhah.", "guidance.label": "Bimbingan Penulis", "guidance.title": "Temui suara dan arah tulisan anda.", "guidance.body": "Sesi bimbingan untuk menyusun idea, membina struktur, menguatkan watak dan menjadikan proses menulis lebih jelas serta terarah.", "guidance.item1": "Idea dan konsep cerita", "guidance.item2": "Struktur dan aliran bab", "guidance.item3": "Semakan manuskrip", "guidance.cta": "Tanya tentang bimbingan <span>→</span>", "ghost.label": "Ghost Writer", "ghost.title": "Biarkan cerita anda ditulis dengan jiwa.", "ghost.body": "Perkhidmatan penulisan dari idea awal hingga manuskrip lengkap, dengan pendekatan yang menjaga suara, visi dan kerahsiaan anda.", "ghost.item1": "Penulisan buku dan memoir", "ghost.item2": "Artikel dan kandungan jenama", "ghost.item3": "Kerahsiaan dan kolaborasi", "ghost.cta": "Bincang projek anda <span>→</span>"
   },
   en: {
-    "nav.home": "Home", "nav.story": "My Story", "nav.books": "Books", "nav.wakaf": "Community", "nav.contact": "Contact", "nav.about": "About", "nav.biography": "Biography", "nav.reviews": "Reader Reviews", "nav.libraries": "Libraries", "nav.journey": "The Journey", "nav.services": "Services", "nav.bimbingan": "Writing Guidance", "nav.ghostwrite": "Ghost Writer", "nav.aria": "Main navigation", "values.aria": "Our values",
+    "nav.home": "Home", "nav.story": "My Story", "nav.profile": "Author Profile", "nav.books": "Books", "nav.wakaf": "Community", "nav.sofri": "Capt. Sofri", "nav.contact": "Contact", "nav.about": "About", "nav.biography": "Biography", "nav.reviews": "Reader Reviews", "nav.libraries": "Libraries", "nav.journey": "The Journey", "nav.services": "Services", "nav.bimbingan": "Writing Guidance", "nav.ghostwrite": "Ghost Writer", "nav.aria": "Main navigation", "values.aria": "Our values",
     "journey.eyebrow": "The journey", "journey.title": "Every journey<br>leaves a light <em>behind.</em>", "journey.body": "Not every chapter is easy to write. Some are written through patience, some through tears, and some through the courage to begin again. Yet every step can bring us closer to the One who knows the whole story.",
     "books.pageTitle": "Siri Cahaya | Emy Dahlia Empire", "books.eyebrow": "The bookshelf", "books.title": "Every book carries <em>a light.</em>", "books.intro": "Words and reflections for the chapters that shape us.", "books.category": "Siri Cahaya", "books.reflections": "Reflections", "books.enquire": "Enquire about this book <span>↗</span>", "books.book1Alt": "Cover of Ya Allah Pilihlah Mereka", "books.book2Alt": "Cover of Cahaya Sebatang Tongkat", "books.book3Alt": "Cover of Perban Cahaya", "books.book4Alt": "Cover of Mulut, Telinga dan Hati",
     "wakaf.eyebrow": "A gift that keeps giving", "wakaf.title": "Share the light.<br><em>Pass it forward.</em>", "wakaf.body": "Wakaf Cahaya is an invitation to share beneficial reading and meaningful reminders with others. A book can travel further than we imagine, reaching a heart at just the right moment.", "wakaf.cta": "Ask about Wakaf Cahaya <span>→</span>",
@@ -68,7 +68,12 @@ function setLanguage(language) {
     if (value) element.setAttribute(attribute, value);
   });
   document.querySelectorAll("[data-language]").forEach(button => button.setAttribute("aria-pressed", String(button.dataset.language === locale)));
-  if (menuToggle) menuToggle.setAttribute("aria-label", locale === "ms" ? "Buka navigasi" : "Open navigation");
+  if (menuToggle) {
+    const open = menuToggle.getAttribute("aria-expanded") === "true";
+    menuToggle.setAttribute("aria-label", locale === "ms"
+      ? (open ? "Tutup navigasi" : "Buka navigasi")
+      : (open ? "Close navigation" : "Open navigation"));
+  }
   localStorage.setItem("emyDahliaLanguage", locale);
 }
 
@@ -76,28 +81,8 @@ const whatsappFloat = document.getElementById("whatsappFloat");
 if (whatsappFloat) whatsappFloat.href = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 const menuToggle = document.querySelector(".menu-toggle");
-const nav = document.getElementById("mainNav");
 document.querySelectorAll("[data-language]").forEach(button => button.addEventListener("click", () => setLanguage(button.dataset.language)));
 setLanguage(localStorage.getItem("emyDahliaLanguage") || "ms");
-function closeMenu() {
-  if (!menuToggle || !nav) return;
-  nav.classList.remove("is-open");
-  menuToggle.setAttribute("aria-expanded", "false");
-  menuToggle.setAttribute("aria-label", document.documentElement.lang === "ms" ? "Buka navigasi" : "Open navigation");
-}
-if (menuToggle && nav) {
-  menuToggle.addEventListener("click", () => {
-    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
-    menuToggle.setAttribute("aria-expanded", String(!isOpen));
-    const isMalay = document.documentElement.lang === "ms";
-    menuToggle.setAttribute("aria-label", isOpen ? (isMalay ? "Buka navigasi" : "Open navigation") : (isMalay ? "Tutup navigasi" : "Close navigation"));
-    nav.classList.toggle("is-open", !isOpen);
-  });
-  nav.querySelectorAll("a").forEach(link => link.addEventListener("click", closeMenu));
-  document.addEventListener("keydown", event => {
-    if (event.key === "Escape") { closeMenu(); menuToggle.focus(); }
-  });
-}
 
 const sectionNavigation = [...document.querySelectorAll(".nav a[href^='#']")];
 const navigableSections = sectionNavigation
