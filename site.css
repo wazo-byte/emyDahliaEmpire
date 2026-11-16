@@ -456,6 +456,39 @@ h2 {
   border-top: 1px solid var(--line);
   padding: 16px 0;
 }
+.tetralogy-package {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8%;
+  align-items: center;
+  padding: clamp(24px, 5vw, 64px);
+  background: var(--white);
+}
+.tetralogy-covers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+.tetralogy-covers img {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  box-shadow: 0 15px 28px #45391c24;
+}
+.tetralogy-copy h2 {
+  font-size: clamp(38px, 4vw, 56px);
+}
+.package-price {
+  margin: 0 0 18px;
+  color: var(--gold);
+  font: 600 26px/1.2 var(--serif);
+}
+.package-delivery {
+  margin: 18px 0 24px;
+  padding-left: 14px;
+  border-left: 2px solid var(--gold);
+  color: var(--muted);
+}
 .steps {
   counter-reset: step;
   display: grid;
@@ -562,6 +595,7 @@ textarea {
   }
   .split,
   .details,
+  .tetralogy-package,
   .contact-layout {
     grid-template-columns: 1fr;
     gap: 36px;
