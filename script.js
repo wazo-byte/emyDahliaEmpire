@@ -2,77 +2,561 @@ const WHATSAPP_NUMBER = "601158883287";
 
 const translations = {
   ms: {
-    "nav.home": "Utama", "nav.story": "Kisah Saya", "nav.profile": "Profil Penulis", "nav.books": "Karya", "nav.wakaf": "Wakaf", "nav.sofri": "Capt. Sofri", "nav.contact": "Hubungi", "nav.about": "Tentang", "nav.biography": "Biografi", "nav.reviews": "Suara Pembaca", "nav.libraries": "Perpustakaan", "nav.journey": "Perjalanan", "nav.services": "Perkhidmatan", "nav.bimbingan": "Bimbingan Penulis", "nav.ghostwrite": "Ghost Writer", "nav.aria": "Navigasi utama", "values.aria": "Nilai-nilai kami",
-    "journey.eyebrow": "Perjalanan", "journey.title": "Setiap perjalanan<br>meninggalkan cahaya <em>di belakang.</em>", "journey.body": "Tidak setiap bab mudah untuk ditulis. Ada yang lahir melalui kesabaran, ada yang melalui air mata, dan ada yang memerlukan keberanian untuk bermula semula. Namun setiap langkah boleh mendekatkan kita kepada Dia yang mengetahui keseluruhan cerita.",
-    "books.pageTitle": "Siri Cahaya | Emy Dahlia Empire", "books.eyebrow": "Rak buku", "books.title": "Setiap buku membawa <em>cahaya.</em>", "books.intro": "Kata-kata dan renungan untuk bab-bab yang membentuk diri kita.", "books.category": "Siri Cahaya", "books.reflections": "Renungan", "books.enquire": "Tanya tentang buku ini <span>↗</span>", "books.book1Alt": "Kulit buku Ya Allah Pilihlah Mereka", "books.book2Alt": "Kulit buku Cahaya Sebatang Tongkat", "books.book3Alt": "Kulit buku Perban Cahaya", "books.book4Alt": "Kulit buku Mulut, Telinga dan Hati",
-    "wakaf.eyebrow": "Hadiah yang terus memberi", "wakaf.title": "Kongsikan cahaya.<br><em>Teruskan manfaatnya.</em>", "wakaf.body": "Wakaf Cahaya ialah satu ajakan untuk berkongsi bacaan yang bermanfaat dan peringatan yang bermakna. Sebuah buku boleh pergi lebih jauh daripada yang kita bayangkan, dan tiba di hati yang tepat pada waktunya.", "wakaf.cta": "Tanya tentang Wakaf Cahaya <span>→</span>",
-    "contact.eyebrow": "Bab baharu bermula di sini", "contact.title": "Mari mulakan<br><em>sebuah bicara.</em>", "contact.body": "Untuk pertanyaan buku, kolaborasi, media dan Wakaf Cahaya, hantarkan mesej kepada kami. Kami amat berbesar hati untuk mendengar daripada anda.", "contact.connect": "Hubungi kami", "contact.social": "Ikuti kami",
-    "form.name": "Nama anda", "form.namePlaceholder": "Nama", "form.interest": "Saya berminat dengan", "form.select": "Sila pilih", "form.book": "Pertanyaan buku", "form.guidance": "Bimbingan Penulis", "form.ghost": "Ghost Writer", "form.wakaf": "Wakaf Cahaya", "form.collaboration": "Kolaborasi", "form.media": "Media &amp; podcast", "form.general": "Pertanyaan umum", "form.message": "Mesej anda", "form.messagePlaceholder": "Ceritakan sedikit tentang keperluan anda...", "form.submit": "Hantar mesej <span>↗</span>", "form.note": "Anda akan menyemak mesej anda di WhatsApp sebelum menghantarnya.", "form.fallback": "WhatsApp tidak dibuka?", "form.openMessage": "Buka mesej anda di sini.",
-    "footer.message": "Semoga setiap cerita mendekatkan kita kepada cahaya-Nya.", "footer.social": "Ikuti kami", "footer.top": "Kembali ke atas ↑", "footer.home": "Kembali ke laman utama", "footer.copyright": "© <span id=\"currentYear\">2026</span> Emy Dahlia Empire. Hak cipta terpelihara.", "footer.values": "Iman · Harapan · Renungan", "whatsapp.label": "Berbual dengan Emy Dahlia Empire di WhatsApp",
-    "hero.eyebrow": "Perjalanan iman, harapan &amp; renungan", "hero.script": "Ini bukan sekadar sebuah cerita.", "hero.title": "Ini adalah perjalanan<br>yang ditulis oleh <em>Allah.</em>", "hero.intro": "Daripada ujian lahirlah kekuatan.<br>Daripada air mata lahirlah cahaya.<br>Daripada iman lahirlah ketabahan.<br>Dan daripada rahmat-Nya, <strong>Siri Cahaya dilahirkan.</strong>", "hero.discover": "Temui perjalanan <span>→</span>", "hero.books": "Terokai buku-buku", "hero.caption": "✧ &nbsp; Sebuah kisah tentang menjadi, mempercayai dan bermula semula.",
-    "values.faith.title": "Iman", "values.faith.body": "Berpaksikan iman<br>yang tidak pernah luntur.", "values.hope.title": "Harapan", "values.hope.body": "Menyebarkan harapan<br>melalui setiap cerita.", "values.reflection.title": "Renungan", "values.reflection.body": "Menggalakkan renungan<br>untuk hari esok yang lebih baik.", "values.everyone.title": "Untuk semua", "values.everyone.body": "Untuk sesiapa yang mencari cahaya<br>dalam perjalanan hidup.", "quote.main": "“Cahaya tidak datang daripada kita. Cahaya datang daripada Allah.<br><em>Pilihlah Cahaya-Nya.</em>”",
-    "about.eyebrow": "Kisah Saya", "about.title": "Dari pengalaman lahirlah tulisan. Dari perjalanan lahirlah Siri Cahaya.",
-    "about.body1": "Saya menulis bukan sekadar untuk menceritakan kehidupan sendiri, tetapi untuk mencari makna di sebalik setiap perjalanan yang Allah izinkan berlaku.",
-    "about.body2": "Ada pengalaman yang kelihatan biasa ketika dilalui, namun setelah direnungi kembali, ia membuka lapisan makna yang tidak pernah saya sedari sebelumnya.",
-    "about.body3": "Daripada doa, ujian keluarga, pertemuan, kehilangan, pencarian dan kesyukuran, lahirlah Siri Cahaya. Sebuah perjalanan yang bermula sebagai kisah peribadi, tetapi akhirnya saya sedari bahawa rasa yang dilalui mungkin turut menjadi sebahagian daripada kisah orang lain.",
-    "about.body4": "Kerana setiap takdir mempunyai ceritanya, dan setiap cerita mempunyai ruang untuk kita mengambil ibrah.", "about.closing": "Empat naskhah, empat perjalanan, satu amanah.", "about.read": "Baca Kisah Saya <span>→</span>", "about.profile": "Lihat Profil Penulis", "about.imageNote": "Dari pengalaman lahirlah tulisan", "about.imageAlt": "Emy Dahlia sedang menulis di meja",
-    "profile.eyebrow": "03 — Profil penulis", "profile.title": "Profil Penulis Rasmi", "profile.subtitle": "Empat naskhah, empat perjalanan, satu amanah.",
-    "profile.description1": "Kenali Emy Dahlia Burhanuddin melalui perjalanan penulisan, karya-karya Siri Cahaya dan pengalaman kehidupan yang menjadi asas kepada penulisan beliau.", "profile.description2": "Profil ini menghimpunkan pengenalan penulis, sinopsis rasmi empat naskhah Siri Cahaya, suara pembaca, jejak karya di perpustakaan serta inisiatif Wakaf Sudut Cahaya.", "profile.description3": "Sebuah dokumen pengenalan rasmi untuk pembaca, perpustakaan, institusi, media dan rakan kolaborasi.", "profile.read": "Baca Profil Penulis <span>↗</span>", "profile.download": "Muat Turun PDF <span>↓</span>", "profile.coverAlt": "Kulit depan Profil Penulis Emy Dahlia Burhanuddin", "biography.eyebrow": "Tentang penulis", "biography.title": "Menulis daripada hidup, untuk menyentuh hati.", "biography.body1": "Emy Dahlia Burhanuddin ialah seorang penulis yang menjadikan pengalaman hidup, renungan dan perjalanan iman sebagai sumber ilham.", "biography.body2": "Melalui penulisannya, beliau berkongsi kisah tentang ujian, harapan dan kekuatan untuk mengajak pembaca melihat cahaya di sebalik setiap takdir.", "biography.body3": "Karya-karya beliau lahir daripada keinginan untuk menyampaikan manfaat, meninggalkan renungan dan menemani sesiapa sahaja yang sedang mencari makna dalam perjalanan hidup.", "biography.imageAlt": "Emy Dahlia Burhanuddin", "reader.title": "Profil Penulis Rasmi", "reader.open": "Buka skrin penuh ↗", "reader.close": "Tutup", "reader.fallback": "Pelayar anda tidak dapat memaparkan PDF ini. <a href=\"assets/profilPenulis.pdf\" target=\"_blank\" rel=\"noopener\">Buka PDF</a>.",
-    "services.eyebrow": "Ruang berkarya", "services.title": "Bina cerita yang <em>bermakna.</em>", "services.intro": "Setiap cerita bermula dengan satu idea. Pilih sokongan yang sesuai untuk membawa idea anda menjadi naskhah.", "guidance.label": "Bimbingan Penulis", "guidance.title": "Temui suara dan arah tulisan anda.", "guidance.body": "Sesi bimbingan untuk menyusun idea, membina struktur, menguatkan watak dan menjadikan proses menulis lebih jelas serta terarah.", "guidance.item1": "Idea dan konsep cerita", "guidance.item2": "Struktur dan aliran bab", "guidance.item3": "Semakan manuskrip", "guidance.cta": "Tanya tentang bimbingan <span>→</span>", "ghost.label": "Ghost Writer", "ghost.title": "Biarkan cerita anda ditulis dengan jiwa.", "ghost.body": "Perkhidmatan penulisan dari idea awal hingga manuskrip lengkap, dengan pendekatan yang menjaga suara, visi dan kerahsiaan anda.", "ghost.item1": "Penulisan buku dan memoir", "ghost.item2": "Artikel dan kandungan jenama", "ghost.item3": "Kerahsiaan dan kolaborasi", "ghost.cta": "Bincang projek anda <span>→</span>"
+    "nav.home": "Utama",
+    "nav.story": "Kisah Saya",
+    "nav.profile": "Profil Penulis",
+    "nav.books": "Buku",
+    "nav.wakaf": "Komuniti",
+    "nav.sofri": "Capt. Sofri",
+    "nav.contact": "Hubungi",
+    "nav.about": "Tentang",
+    "nav.biography": "Biografi",
+    "nav.reviews": "Suara Pembaca",
+    "nav.libraries": "Perpustakaan",
+    "nav.journey": "Perjalanan",
+    "nav.services": "Perkhidmatan",
+    "nav.bimbingan": "Bimbingan Penulis",
+    "nav.ghostwrite": "Ghostwriting",
+    "nav.enquire": "Tanya Sekarang",
+    "nav.aria": "Navigasi utama",
+    "values.aria": "Nilai-nilai kami",
+    "journey.eyebrow": "Perjalanan",
+    "journey.title":
+      "Setiap perjalanan<br>meninggalkan cahaya <em>di belakang.</em>",
+    "journey.body":
+      "Tidak setiap bab mudah untuk ditulis. Ada yang lahir melalui kesabaran, ada yang melalui air mata, dan ada yang memerlukan keberanian untuk bermula semula. Namun setiap langkah boleh mendekatkan kita kepada Dia yang mengetahui keseluruhan cerita.",
+    "books.pageTitle": "Siri Cahaya | Emy Dahlia Empire",
+    "books.eyebrow": "Rak buku",
+    "books.title": "Setiap buku membawa <em>cahaya.</em>",
+    "books.intro":
+      "Kata-kata dan renungan untuk bab-bab yang membentuk diri kita.",
+    "books.category": "Siri Cahaya",
+    "books.reflections": "Renungan",
+    "books.enquire": "Tanya tentang buku ini <span>↗</span>",
+    "books.book1Alt": "Kulit buku Ya Allah Pilihlah Mereka",
+    "books.book2Alt": "Kulit buku Cahaya Sebatang Tongkat",
+    "books.book3Alt": "Kulit buku Perban Cahaya",
+    "books.book4Alt": "Kulit buku Mulut, Telinga dan Hati",
+    "wakaf.eyebrow": "Hadiah yang terus memberi",
+    "wakaf.title": "Kongsikan cahaya.<br><em>Teruskan manfaatnya.</em>",
+    "wakaf.body":
+      "Wakaf Cahaya ialah satu ajakan untuk berkongsi bacaan yang bermanfaat dan peringatan yang bermakna. Sebuah buku boleh pergi lebih jauh daripada yang kita bayangkan, dan tiba di hati yang tepat pada waktunya.",
+    "wakaf.cta": "Tanya tentang Wakaf Cahaya <span>→</span>",
+    "contact.eyebrow": "Bab baharu bermula di sini",
+    "contact.title": "Mari mulakan<br><em>sebuah bicara.</em>",
+    "contact.body":
+      "Untuk pertanyaan buku, kolaborasi, media dan Wakaf Cahaya, hantarkan mesej kepada kami. Kami amat berbesar hati untuk mendengar daripada anda.",
+    "contact.connect": "Hubungi kami",
+    "contact.social": "Ikuti kami",
+    "form.name": "Nama anda",
+    "form.namePlaceholder": "Nama",
+    "form.interest": "Saya berminat dengan",
+    "form.select": "Sila pilih",
+    "form.book": "Pertanyaan buku",
+    "form.guidance": "Bimbingan Penulis",
+    "form.ghost": "Ghost Writer",
+    "form.wakaf": "Wakaf Cahaya",
+    "form.collaboration": "Kolaborasi",
+    "form.media": "Media &amp; podcast",
+    "form.general": "Pertanyaan umum",
+    "form.message": "Mesej anda",
+    "form.messagePlaceholder": "Ceritakan sedikit tentang keperluan anda...",
+    "form.submit": "Hantar mesej <span>↗</span>",
+    "form.note":
+      "Anda akan menyemak mesej anda di WhatsApp sebelum menghantarnya.",
+    "form.fallback": "WhatsApp tidak dibuka?",
+    "form.openMessage": "Buka mesej anda di sini.",
+    "footer.message":
+      "Semoga setiap cerita mendekatkan kita kepada cahaya-Nya.",
+    "footer.social": "Ikuti kami",
+    "footer.top": "Kembali ke atas ↑",
+    "footer.home": "Kembali ke laman utama",
+    "footer.copyright":
+      '© <span id="currentYear">2026</span> Emy Dahlia Empire. Hak cipta terpelihara.',
+    "footer.values": "Iman · Harapan · Renungan",
+    "whatsapp.label": "Berbual dengan Emy Dahlia Empire di WhatsApp",
+    "hero.eyebrow": "Perjalanan iman, harapan &amp; renungan",
+    "hero.script": "Ini bukan sekadar sebuah cerita.",
+    "hero.title": "Ini adalah perjalanan<br>yang ditulis oleh <em>Allah.</em>",
+    "hero.intro":
+      "Daripada ujian lahirlah kekuatan.<br>Daripada air mata lahirlah cahaya.<br>Daripada iman lahirlah ketabahan.<br>Dan daripada rahmat-Nya, <strong>Siri Cahaya dilahirkan.</strong>",
+    "hero.discover": "Temui perjalanan <span>→</span>",
+    "hero.books": "Terokai buku-buku",
+    "hero.caption":
+      "✧ &nbsp; Sebuah kisah tentang menjadi, mempercayai dan bermula semula.",
+    "values.faith.title": "Iman",
+    "values.faith.body": "Berpaksikan iman<br>yang tidak pernah luntur.",
+    "values.hope.title": "Harapan",
+    "values.hope.body": "Menyebarkan harapan<br>melalui setiap cerita.",
+    "values.reflection.title": "Renungan",
+    "values.reflection.body":
+      "Menggalakkan renungan<br>untuk hari esok yang lebih baik.",
+    "values.everyone.title": "Untuk semua",
+    "values.everyone.body":
+      "Untuk sesiapa yang mencari cahaya<br>dalam perjalanan hidup.",
+    "quote.main":
+      "“Cahaya tidak datang daripada kita. Cahaya datang daripada Allah.<br><em>Pilihlah Cahaya-Nya.</em>”",
+    "about.eyebrow": "Kisah Saya",
+    "about.title":
+      "Dari pengalaman lahirlah tulisan. Dari perjalanan lahirlah Siri Cahaya.",
+    "about.body1":
+      "Saya menulis bukan sekadar untuk menceritakan kehidupan sendiri, tetapi untuk mencari makna di sebalik setiap perjalanan yang Allah izinkan berlaku.",
+    "about.body2":
+      "Ada pengalaman yang kelihatan biasa ketika dilalui, namun setelah direnungi kembali, ia membuka lapisan makna yang tidak pernah saya sedari sebelumnya.",
+    "about.body3":
+      "Daripada doa, ujian keluarga, pertemuan, kehilangan, pencarian dan kesyukuran, lahirlah Siri Cahaya. Sebuah perjalanan yang bermula sebagai kisah peribadi, tetapi akhirnya saya sedari bahawa rasa yang dilalui mungkin turut menjadi sebahagian daripada kisah orang lain.",
+    "about.body4":
+      "Kerana setiap takdir mempunyai ceritanya, dan setiap cerita mempunyai ruang untuk kita mengambil ibrah.",
+    "about.closing": "Empat naskhah, empat perjalanan, satu amanah.",
+    "about.read": "Baca Kisah Saya <span>→</span>",
+    "about.profile": "Lihat Profil Penulis",
+    "about.imageNote": "Dari pengalaman lahirlah tulisan",
+    "about.imageAlt": "Emy Dahlia sedang menulis di meja",
+    "profile.eyebrow": "03 — Profil penulis",
+    "profile.title": "Profil Penulis Rasmi",
+    "profile.subtitle": "Empat naskhah, empat perjalanan, satu amanah.",
+    "profile.description1":
+      "Kenali Emy Dahlia Burhanuddin melalui perjalanan penulisan, karya-karya Siri Cahaya dan pengalaman kehidupan yang menjadi asas kepada penulisan beliau.",
+    "profile.description2":
+      "Profil ini menghimpunkan pengenalan penulis, sinopsis rasmi empat naskhah Siri Cahaya, suara pembaca, jejak karya di perpustakaan serta inisiatif Wakaf Sudut Cahaya.",
+    "profile.description3":
+      "Sebuah dokumen pengenalan rasmi untuk pembaca, perpustakaan, institusi, media dan rakan kolaborasi.",
+    "profile.read": "Baca Profil Penulis <span>↗</span>",
+    "profile.download": "Muat Turun PDF <span>↓</span>",
+    "profile.coverAlt": "Kulit depan Profil Penulis Emy Dahlia Burhanuddin",
+    "biography.eyebrow": "Tentang penulis",
+    "biography.title": "Menulis daripada hidup, untuk menyentuh hati.",
+    "biography.body1":
+      "Emy Dahlia Burhanuddin ialah seorang penulis yang menjadikan pengalaman hidup, renungan dan perjalanan iman sebagai sumber ilham.",
+    "biography.body2":
+      "Melalui penulisannya, beliau berkongsi kisah tentang ujian, harapan dan kekuatan untuk mengajak pembaca melihat cahaya di sebalik setiap takdir.",
+    "biography.body3":
+      "Karya-karya beliau lahir daripada keinginan untuk menyampaikan manfaat, meninggalkan renungan dan menemani sesiapa sahaja yang sedang mencari makna dalam perjalanan hidup.",
+    "biography.imageAlt": "Emy Dahlia Burhanuddin",
+    "reader.title": "Profil Penulis Rasmi",
+    "reader.open": "Buka skrin penuh ↗",
+    "reader.close": "Tutup",
+    "reader.fallback":
+      'Pelayar anda tidak dapat memaparkan PDF ini. <a href="assets/profilPenulis.pdf" target="_blank" rel="noopener">Buka PDF</a>.',
+    "services.eyebrow": "Ruang berkarya",
+    "services.title": "Bina cerita yang <em>bermakna.</em>",
+    "services.intro":
+      "Setiap cerita bermula dengan satu idea. Pilih sokongan yang sesuai untuk membawa idea anda menjadi naskhah.",
+    "guidance.label": "Bimbingan Penulis",
+    "guidance.title": "Temui suara dan arah tulisan anda.",
+    "guidance.body":
+      "Sesi bimbingan untuk menyusun idea, membina struktur, menguatkan watak dan menjadikan proses menulis lebih jelas serta terarah.",
+    "guidance.item1": "Idea dan konsep cerita",
+    "guidance.item2": "Struktur dan aliran bab",
+    "guidance.item3": "Semakan manuskrip",
+    "guidance.cta": "Tanya tentang bimbingan <span>→</span>",
+    "ghost.label": "Ghost Writer",
+    "ghost.title": "Biarkan cerita anda ditulis dengan jiwa.",
+    "ghost.body":
+      "Perkhidmatan penulisan dari idea awal hingga manuskrip lengkap, dengan pendekatan yang menjaga suara, visi dan kerahsiaan anda.",
+    "ghost.item1": "Penulisan buku dan memoir",
+    "ghost.item2": "Artikel dan kandungan jenama",
+    "ghost.item3": "Kerahsiaan dan kolaborasi",
+    "ghost.cta": "Bincang projek anda <span>→</span>",
   },
   en: {
-    "nav.home": "Home", "nav.story": "My Story", "nav.profile": "Author Profile", "nav.books": "Books", "nav.wakaf": "Community", "nav.sofri": "Capt. Sofri", "nav.contact": "Contact", "nav.about": "About", "nav.biography": "Biography", "nav.reviews": "Reader Reviews", "nav.libraries": "Libraries", "nav.journey": "The Journey", "nav.services": "Services", "nav.bimbingan": "Writing Guidance", "nav.ghostwrite": "Ghost Writer", "nav.aria": "Main navigation", "values.aria": "Our values",
-    "journey.eyebrow": "The journey", "journey.title": "Every journey<br>leaves a light <em>behind.</em>", "journey.body": "Not every chapter is easy to write. Some are written through patience, some through tears, and some through the courage to begin again. Yet every step can bring us closer to the One who knows the whole story.",
-    "books.pageTitle": "Siri Cahaya | Emy Dahlia Empire", "books.eyebrow": "The bookshelf", "books.title": "Every book carries <em>a light.</em>", "books.intro": "Words and reflections for the chapters that shape us.", "books.category": "Siri Cahaya", "books.reflections": "Reflections", "books.enquire": "Enquire about this book <span>↗</span>", "books.book1Alt": "Cover of Ya Allah Pilihlah Mereka", "books.book2Alt": "Cover of Cahaya Sebatang Tongkat", "books.book3Alt": "Cover of Perban Cahaya", "books.book4Alt": "Cover of Mulut, Telinga dan Hati",
-    "wakaf.eyebrow": "A gift that keeps giving", "wakaf.title": "Share the light.<br><em>Pass it forward.</em>", "wakaf.body": "Wakaf Cahaya is an invitation to share beneficial reading and meaningful reminders with others. A book can travel further than we imagine, reaching a heart at just the right moment.", "wakaf.cta": "Ask about Wakaf Cahaya <span>→</span>",
-    "contact.eyebrow": "A new chapter begins here", "contact.title": "Let’s begin<br><em>a conversation.</em>", "contact.body": "For book enquiries, collaboration, media and Wakaf Cahaya, send us a message. We would love to hear from you.", "contact.connect": "Connect with us", "contact.social": "Follow us",
-    "form.name": "Your name", "form.namePlaceholder": "Name", "form.interest": "I’m interested in", "form.select": "Please select", "form.book": "Book enquiry", "form.guidance": "Writing Guidance", "form.ghost": "Ghost Writer", "form.wakaf": "Wakaf Cahaya", "form.collaboration": "Collaboration", "form.media": "Media &amp; podcast", "form.general": "General enquiry", "form.message": "Your message", "form.messagePlaceholder": "Tell us a little more...", "form.submit": "Send a message <span>↗</span>", "form.note": "You’ll review your message in WhatsApp before sending.", "form.fallback": "WhatsApp didn’t open?", "form.openMessage": "Open your message here.",
-    "footer.message": "May every story lead us closer to His light.", "footer.social": "Follow us", "footer.top": "Back to top ↑", "footer.home": "Back to home", "footer.copyright": "© <span id=\"currentYear\">2026</span> Emy Dahlia Empire. All rights reserved.", "footer.values": "Faith · Hope · Reflection", "whatsapp.label": "Chat with Emy Dahlia Empire on WhatsApp",
-    "hero.eyebrow": "A journey of faith, hope &amp; reflection", "hero.script": "This is not just a story.", "hero.title": "This is a journey<br>written by <em>Allah.</em>", "hero.intro": "From trials came strength.<br>From tears came light.<br>From faith came perseverance.<br>And from His mercy, <strong>Siri Cahaya was born.</strong>", "hero.discover": "Discover the journey <span>→</span>", "hero.books": "Explore the books", "hero.caption": "✧ &nbsp; A story of becoming, believing and beginning again.",
-    "values.faith.title": "Faith", "values.faith.body": "Rooted in faith<br>that never fades.", "values.hope.title": "Hope", "values.hope.body": "Sharing hope<br>through every story.", "values.reflection.title": "Reflection", "values.reflection.body": "Encouraging reflection<br>for a better tomorrow.", "values.everyone.title": "For everyone", "values.everyone.body": "For anyone seeking light<br>in their journey.", "quote.main": "“Light does not come from us. It comes from Allah.<br><em>Choose His Light.</em>”",
-    "about.eyebrow": "My Story", "about.title": "From lived experiences came the words. From the journey came Siri Cahaya.",
-    "about.body1": "I write not merely to tell my own story, but to seek meaning in every journey Allah has allowed me to experience.", "about.body2": "Some experiences seem ordinary as they unfold. Yet when revisited through reflection, they reveal layers of meaning I had never noticed before.", "about.body3": "From prayers, family trials, encounters, loss, spiritual searching and gratitude, Siri Cahaya was born. What began as a personal story gradually became a journey that others might recognize within their own lives.", "about.body4": "For every destiny carries a story, and every story offers an opportunity for reflection and understanding.", "about.closing": "Four books, four journeys, one entrusted purpose.", "about.read": "Read My Story <span>→</span>", "about.profile": "View Author Profile", "about.imageNote": "From lived experience came the words", "about.imageAlt": "Emy Dahlia writing at a desk",
-    "profile.eyebrow": "03 — Author profile", "profile.title": "Official Author Profile", "profile.subtitle": "Four books, four journeys, one entrusted purpose.",     "profile.description1": "Discover Emy Dahlia Burhanuddin through her writing journey, the works of Siri Cahaya, and the life experiences that have shaped her literary voice.", "profile.description2": "This profile brings together the author's introduction, official synopses of the four Siri Cahaya titles, readers' reflections, library presence and the Wakaf Sudut Cahaya initiative.", "profile.description3": "An official introduction prepared for readers, libraries, institutions, media and potential collaborators.", "profile.read": "Read Author Profile <span>↗</span>", "profile.download": "Download PDF <span>↓</span>", "profile.coverAlt": "Cover of the Official Author Profile for Emy Dahlia Burhanuddin", "biography.eyebrow": "About the author", "biography.title": "Writing from life, to touch hearts.", "biography.body1": "Emy Dahlia Burhanuddin is an author who draws inspiration from lived experience, reflection and her journey of faith.", "biography.body2": "Through her writing, she shares stories of trials, hope and strength, inviting readers to look for the light within every destiny.", "biography.body3": "Her work is shaped by a desire to share benefit, leave readers with reflection and accompany anyone seeking meaning in their own journey.", "biography.imageAlt": "Emy Dahlia Burhanuddin", "reader.title": "Official Author Profile", "reader.open": "Open full screen ↗", "reader.close": "Close", "reader.fallback": "Your browser cannot display this PDF. <a href=\"assets/profilPenulis.pdf\" target=\"_blank\" rel=\"noopener\">Open the PDF</a>.",
-    "services.eyebrow": "A space to create", "services.title": "Build a story that <em>matters.</em>", "services.intro": "Every story begins with an idea. Choose the support that will help bring your idea to life.", "guidance.label": "Writing Guidance", "guidance.title": "Find your voice and direction.", "guidance.body": "Guidance sessions to shape your ideas, build structure, strengthen characters and make the writing process clearer and more purposeful.", "guidance.item1": "Story ideas and concepts", "guidance.item2": "Chapter structure and flow", "guidance.item3": "Manuscript review", "guidance.cta": "Ask about guidance <span>→</span>", "ghost.label": "Ghost Writer", "ghost.title": "Let your story be written with soul.", "ghost.body": "Writing support from first idea to complete manuscript, shaped around your voice, vision and confidentiality.", "ghost.item1": "Books and memoirs", "ghost.item2": "Articles and brand content", "ghost.item3": "Confidential collaboration", "ghost.cta": "Discuss your project <span>→</span>"
-  }
+    "nav.home": "Home",
+    "nav.story": "My Story",
+    "nav.profile": "Author Profile",
+    "nav.books": "Books",
+    "nav.wakaf": "Community",
+    "nav.sofri": "Capt. Sofri",
+    "nav.contact": "Contact",
+    "nav.about": "About",
+    "nav.biography": "Biography",
+    "nav.reviews": "Reader Reviews",
+    "nav.libraries": "Libraries",
+    "nav.journey": "The Journey",
+    "nav.services": "Services",
+    "nav.bimbingan": "Writing Guidance",
+    "nav.ghostwrite": "Ghostwriting",
+    "nav.enquire": "Enquire Now",
+    "nav.aria": "Main navigation",
+    "values.aria": "Our values",
+    "journey.eyebrow": "The journey",
+    "journey.title": "Every journey<br>leaves a light <em>behind.</em>",
+    "journey.body":
+      "Not every chapter is easy to write. Some are written through patience, some through tears, and some through the courage to begin again. Yet every step can bring us closer to the One who knows the whole story.",
+    "books.pageTitle": "Siri Cahaya | Emy Dahlia Empire",
+    "books.eyebrow": "The bookshelf",
+    "books.title": "Every book carries <em>a light.</em>",
+    "books.intro": "Words and reflections for the chapters that shape us.",
+    "books.category": "Siri Cahaya",
+    "books.reflections": "Reflections",
+    "books.enquire": "Enquire about this book <span>↗</span>",
+    "books.book1Alt": "Cover of Ya Allah Pilihlah Mereka",
+    "books.book2Alt": "Cover of Cahaya Sebatang Tongkat",
+    "books.book3Alt": "Cover of Perban Cahaya",
+    "books.book4Alt": "Cover of Mulut, Telinga dan Hati",
+    "wakaf.eyebrow": "A gift that keeps giving",
+    "wakaf.title": "Share the light.<br><em>Pass it forward.</em>",
+    "wakaf.body":
+      "Wakaf Cahaya is an invitation to share beneficial reading and meaningful reminders with others. A book can travel further than we imagine, reaching a heart at just the right moment.",
+    "wakaf.cta": "Ask about Wakaf Cahaya <span>→</span>",
+    "contact.eyebrow": "A new chapter begins here",
+    "contact.title": "Let’s begin<br><em>a conversation.</em>",
+    "contact.body":
+      "For book enquiries, collaboration, media and Wakaf Cahaya, send us a message. We would love to hear from you.",
+    "contact.connect": "Connect with us",
+    "contact.social": "Follow us",
+    "form.name": "Your name",
+    "form.namePlaceholder": "Name",
+    "form.interest": "I’m interested in",
+    "form.select": "Please select",
+    "form.book": "Book enquiry",
+    "form.guidance": "Writing Guidance",
+    "form.ghost": "Ghost Writer",
+    "form.wakaf": "Wakaf Cahaya",
+    "form.collaboration": "Collaboration",
+    "form.media": "Media &amp; podcast",
+    "form.general": "General enquiry",
+    "form.message": "Your message",
+    "form.messagePlaceholder": "Tell us a little more...",
+    "form.submit": "Send a message <span>↗</span>",
+    "form.note": "You’ll review your message in WhatsApp before sending.",
+    "form.fallback": "WhatsApp didn’t open?",
+    "form.openMessage": "Open your message here.",
+    "footer.message": "May every story lead us closer to His light.",
+    "footer.social": "Follow us",
+    "footer.top": "Back to top ↑",
+    "footer.home": "Back to home",
+    "footer.copyright":
+      '© <span id="currentYear">2026</span> Emy Dahlia Empire. All rights reserved.',
+    "footer.values": "Faith · Hope · Reflection",
+    "whatsapp.label": "Chat with Emy Dahlia Empire on WhatsApp",
+    "hero.eyebrow": "A journey of faith, hope &amp; reflection",
+    "hero.script": "This is not just a story.",
+    "hero.title": "This is a journey<br>written by <em>Allah.</em>",
+    "hero.intro":
+      "From trials came strength.<br>From tears came light.<br>From faith came perseverance.<br>And from His mercy, <strong>Siri Cahaya was born.</strong>",
+    "hero.discover": "Discover the journey <span>→</span>",
+    "hero.books": "Explore the books",
+    "hero.caption":
+      "✧ &nbsp; A story of becoming, believing and beginning again.",
+    "values.faith.title": "Faith",
+    "values.faith.body": "Rooted in faith<br>that never fades.",
+    "values.hope.title": "Hope",
+    "values.hope.body": "Sharing hope<br>through every story.",
+    "values.reflection.title": "Reflection",
+    "values.reflection.body":
+      "Encouraging reflection<br>for a better tomorrow.",
+    "values.everyone.title": "For everyone",
+    "values.everyone.body": "For anyone seeking light<br>in their journey.",
+    "quote.main":
+      "“Light does not come from us. It comes from Allah.<br><em>Choose His Light.</em>”",
+    "about.eyebrow": "My Story",
+    "about.title":
+      "From lived experiences came the words. From the journey came Siri Cahaya.",
+    "about.body1":
+      "I write not merely to tell my own story, but to seek meaning in every journey Allah has allowed me to experience.",
+    "about.body2":
+      "Some experiences seem ordinary as they unfold. Yet when revisited through reflection, they reveal layers of meaning I had never noticed before.",
+    "about.body3":
+      "From prayers, family trials, encounters, loss, spiritual searching and gratitude, Siri Cahaya was born. What began as a personal story gradually became a journey that others might recognize within their own lives.",
+    "about.body4":
+      "For every destiny carries a story, and every story offers an opportunity for reflection and understanding.",
+    "about.closing": "Four books, four journeys, one entrusted purpose.",
+    "about.read": "Read My Story <span>→</span>",
+    "about.profile": "View Author Profile",
+    "about.imageNote": "From lived experience came the words",
+    "about.imageAlt": "Emy Dahlia writing at a desk",
+    "profile.eyebrow": "03 — Author profile",
+    "profile.title": "Official Author Profile",
+    "profile.subtitle": "Four books, four journeys, one entrusted purpose.",
+    "profile.description1":
+      "Discover Emy Dahlia Burhanuddin through her writing journey, the works of Siri Cahaya, and the life experiences that have shaped her literary voice.",
+    "profile.description2":
+      "This profile brings together the author's introduction, official synopses of the four Siri Cahaya titles, readers' reflections, library presence and the Wakaf Sudut Cahaya initiative.",
+    "profile.description3":
+      "An official introduction prepared for readers, libraries, institutions, media and potential collaborators.",
+    "profile.read": "Read Author Profile <span>↗</span>",
+    "profile.download": "Download PDF <span>↓</span>",
+    "profile.coverAlt":
+      "Cover of the Official Author Profile for Emy Dahlia Burhanuddin",
+    "biography.eyebrow": "About the author",
+    "biography.title": "Writing from life, to touch hearts.",
+    "biography.body1":
+      "Emy Dahlia Burhanuddin is an author who draws inspiration from lived experience, reflection and her journey of faith.",
+    "biography.body2":
+      "Through her writing, she shares stories of trials, hope and strength, inviting readers to look for the light within every destiny.",
+    "biography.body3":
+      "Her work is shaped by a desire to share benefit, leave readers with reflection and accompany anyone seeking meaning in their own journey.",
+    "biography.imageAlt": "Emy Dahlia Burhanuddin",
+    "reader.title": "Official Author Profile",
+    "reader.open": "Open full screen ↗",
+    "reader.close": "Close",
+    "reader.fallback":
+      'Your browser cannot display this PDF. <a href="assets/profilPenulis.pdf" target="_blank" rel="noopener">Open the PDF</a>.',
+    "services.eyebrow": "A space to create",
+    "services.title": "Build a story that <em>matters.</em>",
+    "services.intro":
+      "Every story begins with an idea. Choose the support that will help bring your idea to life.",
+    "guidance.label": "Writing Guidance",
+    "guidance.title": "Find your voice and direction.",
+    "guidance.body":
+      "Guidance sessions to shape your ideas, build structure, strengthen characters and make the writing process clearer and more purposeful.",
+    "guidance.item1": "Story ideas and concepts",
+    "guidance.item2": "Chapter structure and flow",
+    "guidance.item3": "Manuscript review",
+    "guidance.cta": "Ask about guidance <span>→</span>",
+    "ghost.label": "Ghost Writer",
+    "ghost.title": "Let your story be written with soul.",
+    "ghost.body":
+      "Writing support from first idea to complete manuscript, shaped around your voice, vision and confidentiality.",
+    "ghost.item1": "Books and memoirs",
+    "ghost.item2": "Articles and brand content",
+    "ghost.item3": "Confidential collaboration",
+    "ghost.cta": "Discuss your project <span>→</span>",
+  },
 };
 
-Object.assign(translations.ms, {"story.pageTitle":"Kisah Saya | Emy Dahlia Empire","story.back":"Kembali","story.profile":"Lihat Profil Penulis <span>↗</span>","story.read":"Baca Kisah Saya <span>→</span>","story.eyebrow":"Kisah Saya","story.title":"Dari pengalaman lahirlah tulisan.<br>Dari perjalanan lahirlah Siri Cahaya.","story.intro":"Saya menulis bukan sekadar untuk bercerita, tetapi untuk mencari makna di sebalik setiap perjalanan. Daripada pengalaman hidup, ujian keluarga, pencarian rohani dan detik-detik yang Allah izinkan berlaku, lahirlah karya-karya yang mengajak pembaca merenung, memahami dan kembali kepada cahaya-Nya.","story.intro2":"Setiap naskhah ialah sebahagian daripada perjalanan itu — ditulis dengan rasa, doa dan harapan agar ia menemukan hati yang memerlukannya.","story.section1.eyebrow":"01 — Permulaan","story.section1.title":"Saya Tidak Bermula Sebagai Seorang Penulis","story.section1.body1":"Pada awalnya, saya tidak pernah membayangkan bahawa pengalaman hidup akan membawa saya kepada dunia penulisan.","story.section1.body2":"Namun apabila kita kembali melihat perjalanan dengan hati yang lebih tenang, setiap peristiwa mula bercakap.","story.section1.quote":"“Kadang-kadang, tulisan bermula daripada sesuatu yang terlalu lama kita simpan di dalam hati.”","story.section2.eyebrow":"02 — Sebuah doa","story.section2.title":"Bermula dengan Sebuah Doa","story.section2.body1":"Di antara doa, keluarga dan harapan yang dipanjatkan berulang kali, lahirlah kisah pertama. <em>Ya Allah, Pilihlah Mereka</em> bukan bermula sebagai sebuah buku, tetapi sebagai rasa syukur dan doa yang mahu diabadikan.","story.section2.body2":"Dari situ saya belajar bahawa penulisan tidak semestinya bermula dengan keyakinan. Kadangkala ia bermula dengan amanah.","story.section2.imageAlt":"Keluarga Emy Dahlia","story.section3.eyebrow":"03 — Pintu yang lain","story.section3.title":"Apabila Sebuah Penulisan Membuka Pintu yang Lain","story.section3.body":"Sebuah cerita membawa kepada cerita yang lain. Daripada <em>Cahaya Sebatang Tongkat</em> kepada <em>Perban Cahaya</em>, perjalanan ini mengajar saya bahawa setiap karya mempunyai waktunya sendiri.","story.section4.eyebrow":"04 — Mendengar","story.section4.title":"Daripada Melihat kepada Mendengar","story.section4.body":"Ada masa kita menulis kerana melihat sesuatu. Ada masa yang lain, kita menulis kerana belajar mendengar — suara yang terucap, suara yang terpendam dan suara hati.","story.section4.body2":"<em>Mulut, Telinga dan Hati</em> lahir daripada renungan itu: bahawa kata-kata bukan sekadar bunyi, dan diam juga mempunyai makna.","story.section5.eyebrow":"05 — Amanah","story.section5.title":"Menulis untuk Memberi Makna","story.section5.body":"Empat karya, empat perjalanan, satu amanah. Siri Cahaya terus berjalan sebagai catatan kecil tentang doa, ujian, kehilangan, harapan dan cahaya.","story.books":"Lihat Siri Cahaya <span>→</span>"});
-Object.assign(translations.en, {"story.pageTitle":"My Story | Emy Dahlia Empire","story.back":"Back","story.profile":"View Author Profile <span>↗</span>","story.read":"Read My Story <span>→</span>","story.eyebrow":"My Story","story.title":"Writing grew from experience.<br>Siri Cahaya grew from the journey.","story.intro":"I write not simply to tell a story, but to seek meaning in every journey. From life experiences, family trials, spiritual searching and moments Allah allowed to unfold, came works that invite readers to reflect, understand and return to His light.","story.intro2":"Each book is part of that journey — written with feeling, prayer and hope that it will find the heart that needs it.","story.section1.eyebrow":"01 — The beginning","story.section1.title":"I Did Not Begin as a Writer","story.section1.body1":"At first, I never imagined that life experience would lead me into writing. Some things were simply kept inside — as prayers, questions and feelings I could not yet name.","story.section1.body2":"Yet when we look back with a quieter heart, every event begins to speak.","story.section1.quote":"“Sometimes writing begins with something we have kept in our hearts for too long.”","story.section2.eyebrow":"02 — A prayer","story.section2.title":"It Began with a Prayer","story.section2.body1":"Between prayers, family and hopes repeated again and again, the first story was born. <em>Ya Allah, Pilihlah Mereka</em> began as gratitude and a prayer to preserve.","story.section2.body2":"I learned that writing does not always begin with confidence. Sometimes it begins with an entrusted purpose.","story.section2.imageAlt":"Emy Dahlia's family","story.section3.eyebrow":"03 — Another door","story.section3.title":"When One Piece of Writing Opened Another Door","story.section3.body":"One story led to another. From <em>Cahaya Sebatang Tongkat</em> to <em>Perban Cahaya</em>, the journey taught me that every work has its own time.","story.section4.eyebrow":"04 — Listening","story.section4.title":"From Seeing to Listening","story.section4.body":"Sometimes we write because we see something. At other times, we write because we learn to listen — to spoken, unspoken and inner voices.","story.section4.body2":"<em>Mulut, Telinga dan Hati</em> grew from that reflection: words are more than sound, and silence carries meaning too.","story.section5.eyebrow":"05 — An entrusted purpose","story.section5.title":"Writing to Give Meaning","story.section5.body":"Four works, four journeys, one entrusted purpose. Siri Cahaya continues as a quiet record of prayer, trials, loss, hope and light.","story.books":"Explore Siri Cahaya <span>→</span>"});
+Object.assign(translations.ms, {
+  "story.pageTitle": "Kisah Saya | Emy Dahlia Empire",
+  "story.back": "Kembali",
+  "story.profile": "Lihat Profil Penulis <span>↗</span>",
+  "story.read": "Baca Kisah Saya <span>→</span>",
+  "story.eyebrow": "Kisah Saya",
+  "story.title":
+    "Dari pengalaman lahirlah tulisan.<br>Dari perjalanan lahirlah Siri Cahaya.",
+  "story.intro":
+    "Saya menulis bukan sekadar untuk bercerita, tetapi untuk mencari makna di sebalik setiap perjalanan. Daripada pengalaman hidup, ujian keluarga, pencarian rohani dan detik-detik yang Allah izinkan berlaku, lahirlah karya-karya yang mengajak pembaca merenung, memahami dan kembali kepada cahaya-Nya.",
+  "story.intro2":
+    "Setiap naskhah ialah sebahagian daripada perjalanan itu — ditulis dengan rasa, doa dan harapan agar ia menemukan hati yang memerlukannya.",
+  "story.section1.eyebrow": "01 — Permulaan",
+  "story.section1.title": "Saya Tidak Bermula Sebagai Seorang Penulis",
+  "story.section1.body1":
+    "Pada awalnya, saya tidak pernah membayangkan bahawa pengalaman hidup akan membawa saya kepada dunia penulisan.",
+  "story.section1.body2":
+    "Namun apabila kita kembali melihat perjalanan dengan hati yang lebih tenang, setiap peristiwa mula bercakap.",
+  "story.section1.quote":
+    "“Kadang-kadang, tulisan bermula daripada sesuatu yang terlalu lama kita simpan di dalam hati.”",
+  "story.section2.eyebrow": "02 — Sebuah doa",
+  "story.section2.title": "Bermula dengan Sebuah Doa",
+  "story.section2.body1":
+    "Di antara doa, keluarga dan harapan yang dipanjatkan berulang kali, lahirlah kisah pertama. <em>Ya Allah, Pilihlah Mereka</em> bukan bermula sebagai sebuah buku, tetapi sebagai rasa syukur dan doa yang mahu diabadikan.",
+  "story.section2.body2":
+    "Dari situ saya belajar bahawa penulisan tidak semestinya bermula dengan keyakinan. Kadangkala ia bermula dengan amanah.",
+  "story.section2.imageAlt": "Keluarga Emy Dahlia",
+  "story.section3.eyebrow": "03 — Pintu yang lain",
+  "story.section3.title": "Apabila Sebuah Penulisan Membuka Pintu yang Lain",
+  "story.section3.body":
+    "Sebuah cerita membawa kepada cerita yang lain. Daripada <em>Cahaya Sebatang Tongkat</em> kepada <em>Perban Cahaya</em>, perjalanan ini mengajar saya bahawa setiap karya mempunyai waktunya sendiri.",
+  "story.section4.eyebrow": "04 — Mendengar",
+  "story.section4.title": "Daripada Melihat kepada Mendengar",
+  "story.section4.body":
+    "Ada masa kita menulis kerana melihat sesuatu. Ada masa yang lain, kita menulis kerana belajar mendengar — suara yang terucap, suara yang terpendam dan suara hati.",
+  "story.section4.body2":
+    "<em>Mulut, Telinga dan Hati</em> lahir daripada renungan itu: bahawa kata-kata bukan sekadar bunyi, dan diam juga mempunyai makna.",
+  "story.section5.eyebrow": "05 — Amanah",
+  "story.section5.title": "Menulis untuk Memberi Makna",
+  "story.section5.body":
+    "Empat karya, empat perjalanan, satu amanah. Siri Cahaya terus berjalan sebagai catatan kecil tentang doa, ujian, kehilangan, harapan dan cahaya.",
+  "story.books": "Lihat Siri Cahaya <span>→</span>",
+});
+Object.assign(translations.en, {
+  "story.pageTitle": "My Story | Emy Dahlia Empire",
+  "story.back": "Back",
+  "story.profile": "View Author Profile <span>↗</span>",
+  "story.read": "Read My Story <span>→</span>",
+  "story.eyebrow": "My Story",
+  "story.title":
+    "Writing grew from experience.<br>Siri Cahaya grew from the journey.",
+  "story.intro":
+    "I write not simply to tell a story, but to seek meaning in every journey. From life experiences, family trials, spiritual searching and moments Allah allowed to unfold, came works that invite readers to reflect, understand and return to His light.",
+  "story.intro2":
+    "Each book is part of that journey — written with feeling, prayer and hope that it will find the heart that needs it.",
+  "story.section1.eyebrow": "01 — The beginning",
+  "story.section1.title": "I Did Not Begin as a Writer",
+  "story.section1.body1":
+    "At first, I never imagined that life experience would lead me into writing. Some things were simply kept inside — as prayers, questions and feelings I could not yet name.",
+  "story.section1.body2":
+    "Yet when we look back with a quieter heart, every event begins to speak.",
+  "story.section1.quote":
+    "“Sometimes writing begins with something we have kept in our hearts for too long.”",
+  "story.section2.eyebrow": "02 — A prayer",
+  "story.section2.title": "It Began with a Prayer",
+  "story.section2.body1":
+    "Between prayers, family and hopes repeated again and again, the first story was born. <em>Ya Allah, Pilihlah Mereka</em> began as gratitude and a prayer to preserve.",
+  "story.section2.body2":
+    "I learned that writing does not always begin with confidence. Sometimes it begins with an entrusted purpose.",
+  "story.section2.imageAlt": "Emy Dahlia's family",
+  "story.section3.eyebrow": "03 — Another door",
+  "story.section3.title": "When One Piece of Writing Opened Another Door",
+  "story.section3.body":
+    "One story led to another. From <em>Cahaya Sebatang Tongkat</em> to <em>Perban Cahaya</em>, the journey taught me that every work has its own time.",
+  "story.section4.eyebrow": "04 — Listening",
+  "story.section4.title": "From Seeing to Listening",
+  "story.section4.body":
+    "Sometimes we write because we see something. At other times, we write because we learn to listen — to spoken, unspoken and inner voices.",
+  "story.section4.body2":
+    "<em>Mulut, Telinga dan Hati</em> grew from that reflection: words are more than sound, and silence carries meaning too.",
+  "story.section5.eyebrow": "05 — An entrusted purpose",
+  "story.section5.title": "Writing to Give Meaning",
+  "story.section5.body":
+    "Four works, four journeys, one entrusted purpose. Siri Cahaya continues as a quiet record of prayer, trials, loss, hope and light.",
+  "story.books": "Explore Siri Cahaya <span>→</span>",
+});
 
 const profileTranslations = {
   ms: {
-    "biography.eyebrow": "Tentang penulis", "biography.title": "Emy Dahlia Burhanuddin", "biography.body1": "Emy Dahlia Burhanuddin ialah seorang penulis Malaysia yang menghasilkan karya berbentuk renungan kehidupan, penyiasatan rohani dan penulisan kontemplatif, berasaskan pengalaman sebenar, perjalanan keluarga serta pemerhatian terhadap manusia, diri dan makna yang tersembunyi di sebalik peristiwa kehidupan.", "biography.body2": "Penulisannya sering bermula daripada sesuatu yang kelihatan biasa: sebuah peristiwa, pertemuan, kehilangan, ujian, kata-kata yang didengar atau rasa yang tertinggal di dalam hati. Namun apabila pengalaman itu direnungi kembali, sesuatu yang pada awalnya kelihatan biasa sering membuka lapisan makna yang sama sekali berbeza.", "biography.body3": "Selain berkarya, beliau mengusahakan Emy Dahlia Empire (EDE) serta terlibat dalam usaha penerbitan, bimbingan penulisan dan inisiatif Wakaf Sudut Cahaya, yang membawa buku-buku Siri Cahaya ke ruang bacaan untuk dimanfaatkan oleh masyarakat.", "biography.imageAlt": "Emy Dahlia Burhanuddin",
-    "reviews.eyebrow": "Empat naskhah, empat suara", "reviews.title": "Suara <em>pembaca.</em>", "reviews.intro": "Review terpilih daripada pembaca Siri Cahaya.", "reviews.yapm.quote": "“Menangis baca YAPM. Sungguh akak rasa iri sebab Amy ada anak-anak huffaz. Akak doakan cucu akak nanti ada yang menjadi huffaz.”", "reviews.yapm.author": "Dr Vidyamala binti Mohamad<span>Strategist FITRAH &amp; Transformasi Diri | Trainer Bertauliah HRD Corp | Penceramah Bebas</span>", "reviews.cst.quote": "“Saya mengulang baca Cahaya Sebatang Tongkat dengan sedikit kekuatan baharu. Saya menyelaminya hingga ke dasar makna. Ya Allah... hebatnya insan terpilih itu. Semoga yang terbaik sahaja daripada Allah SWT untuknya.”", "reviews.cst.author": "Cikgu Rahmin Mahasan<span>Ketua Penolong Pengarah Kanan SPP | Jabatan Pendidikan Negeri Pahang</span>", "reviews.perban.quote": "“Tanpa kita sedar, Allah membimbing kita supaya berada di jalan yang betul. Allah beri apa yang kita perlu, bukan apa yang kita mahu. Dan sebenarnya Along sedang berusaha untuk menjadi hamba yang lebih baik. Tulisan Memy sebenarnya banyak menyedarkan Along. Insya-Allah, slowly but surely.”", "reviews.perban.author": "Ruyana<span>Penolong Pengarah, Unit Sekolah Jenis Khas | Sektor Pengurusan Sekolah | Jabatan Pendidikan Negeri Pahang</span>", "reviews.mulut.quote": "“Emi tahu tak, bila Ksuzi baca tulisan Emi, ia terasa sangat dekat dengan kehidupan orang yang pernah melaluinya. Ksuzi pernah rasa kehilangan anak. Apa yang kita lalui sebenarnya memang perlu kita lalui.”", "reviews.mulut.author": "Suziharjuta Shaari<span>Berlatarbelakangkan Komunikasi Massa, pernah dalam dunia media dan kewartawanan bersama RTM dan Berita Harian sebelum beralih ke perniagaan, pemasaran dan jualan serta membangunkan Puteri Salon.</span>",
-    "libraries.eyebrow": "Jejak Siri Cahaya", "libraries.title": "Di rak <em>perpustakaan.</em>", "libraries.intro": "Karya-karya Siri Cahaya kini telah berada di rak dan tersedia untuk pembaca di tiga perpustakaan ini.", "libraries.one": "Perpustakaan Awam Raja Tun Uda", "libraries.two": "Perpustakaan Awam Pahang", "libraries.three": "Perpustakaan Terengganu", "wakaf.record": "Rekod sehingga 25 Ogos 2026.", "wakaf.donors": "Pewakaf", "wakaf.locations": "Lokasi diisi", "wakaf.waiting": "Lokasi menanti", "wakaf.locationList": "Tropicana Aman · Putrajaya · Bandar Enstek · Bukit Rimau 24 Jam · Denai Puchong 24 Jam · Damansara Damai 24 Jam · Sri Gombak · Seksyen 13 Shah Alam 24 Jam", "books.synopsis1": "Sebuah renungan tentang doa, usaha dan keberanian mempercayai aturan Allah.", "books.synopsis2": "Sebuah mimpi tentang tongkat bercahaya, 99 hari kemudian sebuah pertemuan, dan rangkaian peristiwa selama tiga tahun tiga bulan.", "books.synopsis3": "Menelusuri luka, taharah jiwa, penerimaan dan kesedaran bahawa manusia tidak pernah benar-benar berjalan sendirian.", "books.synopsis4": "Membaca semula peristiwa kehidupan dan menyedari bahawa tidak semua makna perlu ditemukan pada hari sesuatu itu berlaku."
+    "biography.eyebrow": "Tentang penulis",
+    "biography.title": "Emy Dahlia Burhanuddin",
+    "biography.body1":
+      "Emy Dahlia Burhanuddin ialah seorang penulis Malaysia yang menghasilkan karya berbentuk renungan kehidupan, penyiasatan rohani dan penulisan kontemplatif, berasaskan pengalaman sebenar, perjalanan keluarga serta pemerhatian terhadap manusia, diri dan makna yang tersembunyi di sebalik peristiwa kehidupan.",
+    "biography.body2":
+      "Penulisannya sering bermula daripada sesuatu yang kelihatan biasa: sebuah peristiwa, pertemuan, kehilangan, ujian, kata-kata yang didengar atau rasa yang tertinggal di dalam hati. Namun apabila pengalaman itu direnungi kembali, sesuatu yang pada awalnya kelihatan biasa sering membuka lapisan makna yang sama sekali berbeza.",
+    "biography.body3":
+      "Selain berkarya, beliau mengusahakan Emy Dahlia Empire (EDE) serta terlibat dalam usaha penerbitan, bimbingan penulisan dan inisiatif Wakaf Sudut Cahaya, yang membawa buku-buku Siri Cahaya ke ruang bacaan untuk dimanfaatkan oleh masyarakat.",
+    "biography.imageAlt": "Emy Dahlia Burhanuddin",
+    "reviews.eyebrow": "Empat naskhah, empat suara",
+    "reviews.title": "Suara <em>pembaca.</em>",
+    "reviews.intro": "Review terpilih daripada pembaca Siri Cahaya.",
+    "reviews.yapm.quote":
+      "“Menangis baca YAPM. Sungguh akak rasa iri sebab Amy ada anak-anak huffaz. Akak doakan cucu akak nanti ada yang menjadi huffaz.”",
+    "reviews.yapm.author":
+      "Dr Vidyamala binti Mohamad<span>Strategist FITRAH &amp; Transformasi Diri | Trainer Bertauliah HRD Corp | Penceramah Bebas</span>",
+    "reviews.cst.quote":
+      "“Saya mengulang baca Cahaya Sebatang Tongkat dengan sedikit kekuatan baharu. Saya menyelaminya hingga ke dasar makna. Ya Allah... hebatnya insan terpilih itu. Semoga yang terbaik sahaja daripada Allah SWT untuknya.”",
+    "reviews.cst.author":
+      "Cikgu Rahmin Mahasan<span>Ketua Penolong Pengarah Kanan SPP | Jabatan Pendidikan Negeri Pahang</span>",
+    "reviews.perban.quote":
+      "“Tanpa kita sedar, Allah membimbing kita supaya berada di jalan yang betul. Allah beri apa yang kita perlu, bukan apa yang kita mahu. Dan sebenarnya Along sedang berusaha untuk menjadi hamba yang lebih baik. Tulisan Memy sebenarnya banyak menyedarkan Along. Insya-Allah, slowly but surely.”",
+    "reviews.perban.author":
+      "Ruyana<span>Penolong Pengarah, Unit Sekolah Jenis Khas | Sektor Pengurusan Sekolah | Jabatan Pendidikan Negeri Pahang</span>",
+    "reviews.mulut.quote":
+      "“Emi tahu tak, bila Ksuzi baca tulisan Emi, ia terasa sangat dekat dengan kehidupan orang yang pernah melaluinya. Ksuzi pernah rasa kehilangan anak. Apa yang kita lalui sebenarnya memang perlu kita lalui.”",
+    "reviews.mulut.author":
+      "Suziharjuta Shaari<span>Berlatarbelakangkan Komunikasi Massa, pernah dalam dunia media dan kewartawanan bersama RTM dan Berita Harian sebelum beralih ke perniagaan, pemasaran dan jualan serta membangunkan Puteri Salon.</span>",
+    "libraries.eyebrow": "Jejak Siri Cahaya",
+    "libraries.title": "Di rak <em>perpustakaan.</em>",
+    "libraries.intro":
+      "Karya-karya Siri Cahaya kini telah berada di rak dan tersedia untuk pembaca di tiga perpustakaan ini.",
+    "libraries.one": "Perpustakaan Awam Raja Tun Uda",
+    "libraries.two": "Perpustakaan Awam Pahang",
+    "libraries.three": "Perpustakaan Terengganu",
+    "wakaf.record": "Rekod sehingga 25 Ogos 2026.",
+    "wakaf.donors": "Pewakaf",
+    "wakaf.locations": "Lokasi diisi",
+    "wakaf.waiting": "Lokasi menanti",
+    "wakaf.locationList":
+      "Bukit Rimau · Seksyen 13 Shah Alam · Damansara Damai · Tropicana Aman · Bukit Jalil · Equine · Putrajaya · Putra Perdana · Bandar Enstek · Sendayan · Setia Alam · Sri Gombak · Wangsa Maju",
+    "books.synopsis1":
+      "Sebuah renungan tentang doa, usaha dan keberanian mempercayai aturan Allah.",
+    "books.synopsis2":
+      "Sebuah mimpi tentang tongkat bercahaya, 99 hari kemudian sebuah pertemuan, dan rangkaian peristiwa selama tiga tahun tiga bulan.",
+    "books.synopsis3":
+      "Menelusuri luka, taharah jiwa, penerimaan dan kesedaran bahawa manusia tidak pernah benar-benar berjalan sendirian.",
+    "books.synopsis4":
+      "Membaca semula peristiwa kehidupan dan menyedari bahawa tidak semua makna perlu ditemukan pada hari sesuatu itu berlaku.",
   },
   en: {
-    "biography.eyebrow": "About the author", "biography.title": "Emy Dahlia Burhanuddin", "biography.body1": "Emy Dahlia Burhanuddin is a Malaysian author whose work takes the form of reflections on life, spiritual inquiry and contemplative writing, grounded in lived experience, family journeys and observations of people, the self and the meanings hidden within life events.", "biography.body2": "Her writing often begins with something that appears ordinary: an event, encounter, loss, trial, words once heard or a feeling left in the heart. Yet when that experience is reflected upon again, what first seemed ordinary often reveals an entirely different layer of meaning.", "biography.body3": "Alongside her writing, she leads Emy Dahlia Empire (EDE) and is involved in publishing, writing guidance and the Wakaf Sudut Cahaya initiative, which brings Siri Cahaya books to reading spaces for the community to benefit from.", "biography.imageAlt": "Emy Dahlia Burhanuddin",
-    "reviews.eyebrow": "Four books, four voices", "reviews.title": "Reader <em>voices.</em>", "reviews.intro": "Selected reviews from Siri Cahaya readers.", "reviews.yapm.quote": "“I cried reading YAPM. I truly felt envious because Amy has children who are huffaz. I pray that one day my grandchildren will become huffaz too.”", "reviews.yapm.author": "Dr Vidyamala binti Mohamad<span>FITRAH &amp; Self-Transformation Strategist | HRD Corp Accredited Trainer | Independent Speaker</span>", "reviews.cst.quote": "“I reread Cahaya Sebatang Tongkat with renewed strength. I immersed myself in it to the depths of its meaning. Ya Allah... how remarkable that chosen person is. May only the best from Allah SWT be granted to her.”", "reviews.cst.author": "Cikgu Rahmin Mahasan<span>Senior Assistant Director, SPP | Pahang State Education Department</span>", "reviews.perban.quote": "“Without us realising it, Allah guides us to be on the right path. Allah gives us what we need, not what we want. And truly, Along is trying to become a better servant. Memy’s writing has made Along realise so much. Insya-Allah, slowly but surely.”", "reviews.perban.author": "Ruyana<span>Assistant Director, Special-Type Schools Unit | School Management Sector | Pahang State Education Department</span>", "reviews.mulut.quote": "“Emi, when Ksuzi reads your writing, it feels very close to the lives of people who have gone through it. Ksuzi has experienced the loss of a child. What we go through is indeed what we need to go through.”", "reviews.mulut.author": "Suziharjuta Shaari<span>Background in Mass Communication; formerly in media and journalism with RTM and Berita Harian before moving into business, marketing, sales and developing Puteri Salon.</span>",
-    "libraries.eyebrow": "Siri Cahaya’s journey", "libraries.title": "On library <em>shelves.</em>", "libraries.intro": "Siri Cahaya works are now on shelves and available to readers in these three libraries.", "libraries.one": "Raja Tun Uda Public Library", "libraries.two": "Pahang Public Library", "libraries.three": "Terengganu Library", "wakaf.record": "Record as at 25 August 2026.", "wakaf.donors": "Donors", "wakaf.locations": "Filled locations", "wakaf.waiting": "Waiting locations", "wakaf.locationList": "Tropicana Aman · Putrajaya · Bandar Enstek · Bukit Rimau 24 Jam · Denai Puchong 24 Jam · Damansara Damai 24 Jam · Sri Gombak · Section 13 Shah Alam 24 Jam", "books.synopsis1": "A reflection on prayer, effort and the courage to trust Allah’s order.", "books.synopsis2": "A dream of a luminous cane, an encounter 99 days later, and a sequence of events spanning three years and three months.", "books.synopsis3": "A journey through wounds, purification of the soul, acceptance and the realisation that people never truly walk alone.", "books.synopsis4": "A return to life’s events and the realisation that not every meaning needs to be found on the day something happens."
-  }
+    "biography.eyebrow": "About the author",
+    "biography.title": "Emy Dahlia Burhanuddin",
+    "biography.body1":
+      "Emy Dahlia Burhanuddin is a Malaysian author whose work takes the form of reflections on life, spiritual inquiry and contemplative writing, grounded in lived experience, family journeys and observations of people, the self and the meanings hidden within life events.",
+    "biography.body2":
+      "Her writing often begins with something that appears ordinary: an event, encounter, loss, trial, words once heard or a feeling left in the heart. Yet when that experience is reflected upon again, what first seemed ordinary often reveals an entirely different layer of meaning.",
+    "biography.body3":
+      "Alongside her writing, she leads Emy Dahlia Empire (EDE) and is involved in publishing, writing guidance and the Wakaf Sudut Cahaya initiative, which brings Siri Cahaya books to reading spaces for the community to benefit from.",
+    "biography.imageAlt": "Emy Dahlia Burhanuddin",
+    "reviews.eyebrow": "Four books, four voices",
+    "reviews.title": "Reader <em>voices.</em>",
+    "reviews.intro": "Selected reviews from Siri Cahaya readers.",
+    "reviews.yapm.quote":
+      "“I cried reading YAPM. I truly felt envious because Amy has children who are huffaz. I pray that one day my grandchildren will become huffaz too.”",
+    "reviews.yapm.author":
+      "Dr Vidyamala binti Mohamad<span>FITRAH &amp; Self-Transformation Strategist | HRD Corp Accredited Trainer | Independent Speaker</span>",
+    "reviews.cst.quote":
+      "“I reread Cahaya Sebatang Tongkat with renewed strength. I immersed myself in it to the depths of its meaning. Ya Allah... how remarkable that chosen person is. May only the best from Allah SWT be granted to her.”",
+    "reviews.cst.author":
+      "Cikgu Rahmin Mahasan<span>Senior Assistant Director, SPP | Pahang State Education Department</span>",
+    "reviews.perban.quote":
+      "“Without us realising it, Allah guides us to be on the right path. Allah gives us what we need, not what we want. And truly, Along is trying to become a better servant. Memy’s writing has made Along realise so much. Insya-Allah, slowly but surely.”",
+    "reviews.perban.author":
+      "Ruyana<span>Assistant Director, Special-Type Schools Unit | School Management Sector | Pahang State Education Department</span>",
+    "reviews.mulut.quote":
+      "“Emi, when Ksuzi reads your writing, it feels very close to the lives of people who have gone through it. Ksuzi has experienced the loss of a child. What we go through is indeed what we need to go through.”",
+    "reviews.mulut.author":
+      "Suziharjuta Shaari<span>Background in Mass Communication; formerly in media and journalism with RTM and Berita Harian before moving into business, marketing, sales and developing Puteri Salon.</span>",
+    "libraries.eyebrow": "Siri Cahaya’s journey",
+    "libraries.title": "On library <em>shelves.</em>",
+    "libraries.intro":
+      "Siri Cahaya works are now on shelves and available to readers in these three libraries.",
+    "libraries.one": "Raja Tun Uda Public Library",
+    "libraries.two": "Pahang Public Library",
+    "libraries.three": "Terengganu Library",
+    "wakaf.record": "Record as at 25 August 2026.",
+    "wakaf.donors": "Donors",
+    "wakaf.locations": "Filled locations",
+    "wakaf.waiting": "Waiting locations",
+    "wakaf.locationList":
+      "Bukit Rimau · Section 13 Shah Alam · Damansara Damai · Tropicana Aman · Bukit Jalil · Equine · Putrajaya · Putra Perdana · Bandar Enstek · Sendayan · Setia Alam · Sri Gombak · Wangsa Maju",
+    "books.synopsis1":
+      "A reflection on prayer, effort and the courage to trust Allah’s order.",
+    "books.synopsis2":
+      "A dream of a luminous cane, an encounter 99 days later, and a sequence of events spanning three years and three months.",
+    "books.synopsis3":
+      "A journey through wounds, purification of the soul, acceptance and the realisation that people never truly walk alone.",
+    "books.synopsis4":
+      "A return to life’s events and the realisation that not every meaning needs to be found on the day something happens.",
+  },
 };
 
 function setLanguage(language) {
   const locale = translations[language] ? language : "ms";
   document.documentElement.lang = locale;
-  document.querySelectorAll("[data-i18n]").forEach(element => {
-    const value = translations[locale][element.dataset.i18n] ?? profileTranslations[locale][element.dataset.i18n];
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const value =
+      translations[locale][element.dataset.i18n] ??
+      profileTranslations[locale][element.dataset.i18n];
     if (value) element.innerHTML = value;
   });
-  document.querySelectorAll("[data-i18n-placeholder], [data-i18n-aria-label], [data-i18n-alt]").forEach(element => {
-    const attribute = element.hasAttribute("data-i18n-placeholder") ? "placeholder" : element.hasAttribute("data-i18n-aria-label") ? "aria-label" : "alt";
-    const datasetKey = attribute === "placeholder" ? "i18nPlaceholder" : attribute === "aria-label" ? "i18nAriaLabel" : "i18nAlt";
-    const key = element.dataset[datasetKey];
-    const value = translations[locale][key] ?? profileTranslations[locale][key];
-    if (value) element.setAttribute(attribute, value);
-  });
-  document.querySelectorAll("[data-language]").forEach(button => button.setAttribute("aria-pressed", String(button.dataset.language === locale)));
+  document
+    .querySelectorAll(
+      "[data-i18n-placeholder], [data-i18n-aria-label], [data-i18n-alt]",
+    )
+    .forEach((element) => {
+      const attribute = element.hasAttribute("data-i18n-placeholder")
+        ? "placeholder"
+        : element.hasAttribute("data-i18n-aria-label")
+          ? "aria-label"
+          : "alt";
+      const datasetKey =
+        attribute === "placeholder"
+          ? "i18nPlaceholder"
+          : attribute === "aria-label"
+            ? "i18nAriaLabel"
+            : "i18nAlt";
+      const key = element.dataset[datasetKey];
+      const value =
+        translations[locale][key] ?? profileTranslations[locale][key];
+      if (value) element.setAttribute(attribute, value);
+    });
+  document
+    .querySelectorAll("[data-language]")
+    .forEach((button) =>
+      button.setAttribute(
+        "aria-pressed",
+        String(button.dataset.language === locale),
+      ),
+    );
   if (menuToggle) {
     const open = menuToggle.getAttribute("aria-expanded") === "true";
-    menuToggle.setAttribute("aria-label", locale === "ms"
-      ? (open ? "Tutup navigasi" : "Buka navigasi")
-      : (open ? "Close navigation" : "Open navigation"));
+    menuToggle.setAttribute(
+      "aria-label",
+      locale === "ms"
+        ? open
+          ? "Tutup navigasi"
+          : "Buka navigasi"
+        : open
+          ? "Close navigation"
+          : "Open navigation",
+    );
   }
   localStorage.setItem("emyDahliaLanguage", locale);
 }
@@ -81,55 +565,70 @@ const whatsappFloat = document.getElementById("whatsappFloat");
 if (whatsappFloat) whatsappFloat.href = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 const menuToggle = document.querySelector(".menu-toggle");
-document.querySelectorAll("[data-language]").forEach(button => button.addEventListener("click", () => setLanguage(button.dataset.language)));
+document
+  .querySelectorAll("[data-language]")
+  .forEach((button) =>
+    button.addEventListener("click", () =>
+      setLanguage(button.dataset.language),
+    ),
+  );
 setLanguage(localStorage.getItem("emyDahliaLanguage") || "ms");
 
 const sectionNavigation = [...document.querySelectorAll(".nav a[href^='#']")];
 const navigableSections = sectionNavigation
-  .map(link => document.querySelector(link.getAttribute("href")))
+  .map((link) => document.querySelector(link.getAttribute("href")))
   .filter(Boolean);
 function setCurrentNavigation(section) {
-  sectionNavigation.forEach(link => {
+  sectionNavigation.forEach((link) => {
     const isCurrent = link.getAttribute("href") === `#${section.id}`;
     link.classList.toggle("is-current", isCurrent);
     if (isCurrent) link.setAttribute("aria-current", "page");
     else link.removeAttribute("aria-current");
   });
 }
-sectionNavigation.forEach(link => link.addEventListener("click", () => {
-  const section = document.querySelector(link.getAttribute("href"));
-  if (section) setCurrentNavigation(section);
-}));
+sectionNavigation.forEach((link) =>
+  link.addEventListener("click", () => {
+    const section = document.querySelector(link.getAttribute("href"));
+    if (section) setCurrentNavigation(section);
+  }),
+);
 if (navigableSections.length) {
   const updateCurrentNavigation = () => {
-    const headerOffset = document.querySelector(".site-header")?.offsetHeight || 0;
+    const headerOffset =
+      document.querySelector(".site-header")?.offsetHeight || 0;
     let currentSection = navigableSections[0];
-    navigableSections.forEach(section => {
-      if (section.getBoundingClientRect().top <= headerOffset + 24) currentSection = section;
+    navigableSections.forEach((section) => {
+      if (section.getBoundingClientRect().top <= headerOffset + 24)
+        currentSection = section;
     });
     setCurrentNavigation(currentSection);
   };
-  const hashSection = window.location.hash ? document.querySelector(window.location.hash) : null;
-  if (hashSection && navigableSections.includes(hashSection)) setCurrentNavigation(hashSection);
+  const hashSection = window.location.hash
+    ? document.querySelector(window.location.hash)
+    : null;
+  if (hashSection && navigableSections.includes(hashSection))
+    setCurrentNavigation(hashSection);
   else updateCurrentNavigation();
   window.addEventListener("scroll", updateCurrentNavigation, { passive: true });
   window.addEventListener("hashchange", updateCurrentNavigation);
 }
 
-document.querySelectorAll("[data-book]").forEach(link => {
+document.querySelectorAll("[data-book]").forEach((link) => {
   link.addEventListener("click", () => {
     const intent = document.getElementById("intent");
     const details = document.getElementById("details");
     if (intent) intent.value = "Book enquiry";
-    if (details) details.value = `I would like to enquire about: ${link.dataset.book}.`;
+    if (details)
+      details.value = `I would like to enquire about: ${link.dataset.book}.`;
   });
 });
-document.querySelectorAll("[data-interest]").forEach(link => {
+document.querySelectorAll("[data-interest]").forEach((link) => {
   link.addEventListener("click", () => {
     const intent = document.getElementById("intent");
     const details = document.getElementById("details");
     if (intent) intent.value = link.dataset.interest;
-    if (details) details.value = `I would like to know more about ${link.dataset.interest}.`;
+    if (details)
+      details.value = `I would like to know more about ${link.dataset.interest}.`;
   });
 });
 
@@ -137,14 +636,21 @@ const form = document.getElementById("inquiryForm");
 const fallback = document.getElementById("whatsappFallback");
 const manualLink = document.getElementById("manualLink");
 if (form) {
-  form.addEventListener("submit", event => {
+  form.addEventListener("submit", (event) => {
     event.preventDefault();
     if (!form.reportValidity()) return;
     const data = new FormData(form);
     const name = String(data.get("name") || "").trim();
     const intent = String(data.get("intent") || "General enquiry");
     const details = String(data.get("details") || "").trim();
-    const message = ["Assalamualaikum Emy Dahlia Empire,", "", `My name is ${name}.`, `I'm interested in: ${intent}.`, "", details].join("\n");
+    const message = [
+      "Assalamualaikum Emy Dahlia Empire,",
+      "",
+      `My name is ${name}.`,
+      `I'm interested in: ${intent}.`,
+      "",
+      details,
+    ].join("\n");
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
     const popup = window.open(url, "_blank");
     if (popup) {
@@ -164,25 +670,69 @@ const profileReader = document.getElementById("profileReader");
 const openProfileReader = document.getElementById("openProfileReader");
 if (profileReader && openProfileReader) {
   openProfileReader.addEventListener("click", () => profileReader.showModal());
-  profileReader.querySelectorAll("[data-close-profile-reader]").forEach(button => button.addEventListener("click", () => profileReader.close()));
-  profileReader.addEventListener("click", event => { if (event.target === profileReader) profileReader.close(); });
+  profileReader
+    .querySelectorAll("[data-close-profile-reader]")
+    .forEach((button) =>
+      button.addEventListener("click", () => profileReader.close()),
+    );
+  profileReader.addEventListener("click", (event) => {
+    if (event.target === profileReader) profileReader.close();
+  });
 }
 
 Object.assign(translations.ms, {
-  "books.catalogueTitle": "Karya Siri Cahaya", "books.details": "Lihat butiran buku <span>→</span>", "books.fullSynopsis": "Sinopsis", "books.full1": "Sebuah renungan tentang doa, usaha dan keberanian mempercayai aturan Allah — tentang zuriat, tawakal dan harapan yang terus dijaga.", "books.full2": "Sebuah mimpi tentang tongkat bercahaya, sebuah pertemuan 99 hari kemudian, dan rentetan peristiwa selama tiga tahun tiga bulan dalam pencarian petunjuk dan makna.", "books.full3": "Menelusuri luka, taharah jiwa, penerimaan dan kesedaran bahawa manusia tidak pernah benar-benar berjalan sendirian; sebuah perjalanan tentang penyembuhan dan penjagaan Allah.", "books.full4": "Membaca semula peristiwa kehidupan dan menyedari bahawa tidak semua makna perlu ditemukan pada hari sesuatu itu berlaku — sebuah ajakan untuk diam, mendengar dan sedar.", "books.specs": "", "profile.languageNote": "Profil PDF rasmi ini disediakan dalam Bahasa Melayu."
+  "books.catalogueTitle": "Karya Siri Cahaya",
+  "books.details": "Lihat butiran buku <span>→</span>",
+  "books.fullSynopsis": "Sinopsis",
+  "books.full1":
+    "Sebuah renungan tentang doa, usaha dan keberanian mempercayai aturan Allah — tentang zuriat, tawakal dan harapan yang terus dijaga.",
+  "books.full2":
+    "Sebuah mimpi tentang tongkat bercahaya, sebuah pertemuan 99 hari kemudian, dan rentetan peristiwa selama tiga tahun tiga bulan dalam pencarian petunjuk dan makna.",
+  "books.full3":
+    "Menelusuri luka, taharah jiwa, penerimaan dan kesedaran bahawa manusia tidak pernah benar-benar berjalan sendirian; sebuah perjalanan tentang penyembuhan dan penjagaan Allah.",
+  "books.full4":
+    "Membaca semula peristiwa kehidupan dan menyedari bahawa tidak semua makna perlu ditemukan pada hari sesuatu itu berlaku — sebuah ajakan untuk diam, mendengar dan sedar.",
+  "books.specs": "",
+  "profile.languageNote":
+    "Profil PDF rasmi ini disediakan dalam Bahasa Melayu.",
 });
 Object.assign(translations.en, {
-  "books.catalogueTitle": "Siri Cahaya Books", "books.details": "View book details <span>→</span>", "books.fullSynopsis": "Full synopsis", "books.full1": "A reflection on prayer, effort and the courage to trust Allah’s order — on children, surrender and hope that continues to be held.", "books.full2": "A dream of a luminous cane, an encounter 99 days later and a sequence of events across three years and three months in search of guidance and meaning.", "books.full3": "A journey through wounds, purification of the soul, acceptance and the realisation that people never truly walk alone; a journey of healing and Allah’s care.", "books.full4": "A return to life’s events and the realisation that not every meaning needs to be found on the day something happens — an invitation to be still, listen and become aware.", "books.specs": "ISBN and book specifications: contact Emy Dahlia Empire for verified information.", "profile.languageNote": "The official PDF profile is provided in Bahasa Melayu."
+  "books.catalogueTitle": "Siri Cahaya Books",
+  "books.details": "View book details <span>→</span>",
+  "books.fullSynopsis": "Full synopsis",
+  "books.full1":
+    "A reflection on prayer, effort and the courage to trust Allah’s order — on children, surrender and hope that continues to be held.",
+  "books.full2":
+    "A dream of a luminous cane, an encounter 99 days later and a sequence of events across three years and three months in search of guidance and meaning.",
+  "books.full3":
+    "A journey through wounds, purification of the soul, acceptance and the realisation that people never truly walk alone; a journey of healing and Allah’s care.",
+  "books.full4":
+    "A return to life’s events and the realisation that not every meaning needs to be found on the day something happens — an invitation to be still, listen and become aware.",
+  "books.specs":
+    "ISBN and book specifications: contact Emy Dahlia Empire for verified information.",
+  "profile.languageNote":
+    "The official PDF profile is provided in Bahasa Melayu.",
 });
 
 // Keep the landing page focused on discovery; the full biography now lives on Kisah Saya.
-if (document.body.classList.contains("home-page") || document.querySelector("main > .hero")) {
+if (
+  document.body.classList.contains("home-page") ||
+  document.querySelector("main > .hero")
+) {
   const main = document.querySelector("main");
   const orderedSections = [
-    ".hero", ".values-strip", ".quote-band", ".about-story", ".books-section",
-    ".reader-reviews-section", ".libraries-section", ".wakaf-section", ".author-profile-section", ".contact-section"
+    ".hero",
+    ".values-strip",
+    ".quote-band",
+    ".about-story",
+    ".books-section",
+    ".reader-reviews-section",
+    ".libraries-section",
+    ".wakaf-section",
+    ".author-profile-section",
+    ".contact-section",
   ];
-  orderedSections.forEach(selector => {
+  orderedSections.forEach((selector) => {
     const section = main?.querySelector(`:scope > ${selector}`);
     if (section) main.append(section);
   });
