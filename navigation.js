@@ -10,8 +10,8 @@
     },
     {
       key: "nav.about",
-      href: "profile-penulis.html",
-      pages: ["profile-penulis.html"],
+      href: "kisah-saya.html",
+      pages: ["kisah-saya.html"],
     },
     {
       key: "nav.wakaf",

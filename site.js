@@ -53,7 +53,7 @@ function nav() {
     ["index.html", "Utama", "Home"],
     ["siri-cahaya.html", "Buku", "Books"],
     ["ghostwriting.html", "Dunia Penulisan", "World of Writing"],
-    ["profile-penulis.html", "Tentang", "About"],
+    ["kisah-saya.html", "Tentang", "About"],
     ["jejak-cahaya.html", "Jejak Cahaya", "Trails of Light"],
     ["services.html", "Hubungi", "Contact"],
   ];
