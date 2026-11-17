@@ -36,8 +36,8 @@ function nav() {
   const items = [
     ["index.html", "Utama", "Home"],
     ["siri-cahaya.html", "Buku", "Books"],
-    ["ghostwriting.html", "Ghostwriting", "Ghostwriting"],
-    ["profile-penulis.html", "Tentang", "About"],
+    ["ghostwriting.html", "Studio Penulisan", "Writing Studio"],
+    ["kisah-saya.html", "Tentang", "About"],
     ["wakaf-sudut-cahaya.html", "Komuniti", "Community"],
     ["services.html", "Hubungi", "Contact"],
   ];
