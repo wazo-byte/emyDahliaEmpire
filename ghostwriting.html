@@ -15,8 +15,11 @@
   <body>
     <header class="site-head">
       <div class="wrap head-inner">
-        <a class="brand" href="index.html">EMY DAHLIA <b>EMPIRE</b></a>
-        <nav class="site-nav" data-site-nav></nav>
+        <a class="brand" href="index.html">
+          <img class="brand-logo" src="assets/logo.jpeg" alt="Emy Dahlia Empire" />
+          <span class="brand-name">EMY DAHLIA <b>EMPIRE</b></span>
+        </a>
+        <nav class="site-nav" id="mainNav" data-site-nav></nav>
         <div class="actions">
           <div class="lang">
             <button data-language="ms">BM</button
@@ -28,7 +31,14 @@
             data-ms="Tanya Sekarang"
             data-en="Enquire Now"
             >Tanya Sekarang</a
-          ><button class="menu" data-menu aria-label="Menu">Menu</button>
+          ><button
+            class="menu-toggle"
+            data-menu
+            type="button"
+            aria-label="Buka navigasi"
+            aria-expanded="false"
+            aria-controls="mainNav"
+          ><span></span><span></span></button>
         </div>
       </div>
     </header>

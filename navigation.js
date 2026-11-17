@@ -15,8 +15,8 @@
     },
     {
       key: "nav.wakaf",
-      href: "wakaf-sudut-cahaya.html",
-      pages: ["wakaf-sudut-cahaya.html", "wakaf.html"],
+      href: "jejak-cahaya.html",
+      pages: ["jejak-cahaya.html", "wakaf.html"],
     },
     {
       key: "nav.contact",
@@ -28,9 +28,9 @@
   const linkLabels = {
     "nav.home": "Utama",
     "nav.books": "Buku",
-    "nav.ghostwrite": "Ghostwriting",
+    "nav.ghostwrite": "Dunia Penulisan",
     "nav.about": "Tentang",
-    "nav.wakaf": "Komuniti",
+    "nav.wakaf": "Jejak Cahaya",
     "nav.contact": "Hubungi",
     "nav.enquire": "Tanya Sekarang",
   };

@@ -2515,3 +2515,32 @@ textarea:focus-visible {
     );
   }
 }
+@media (max-width: 480px) {
+  .nav-enquire {
+    display: none;
+  }
+}
+@media (max-width: 380px) {
+  .header-inner {
+    gap: 12px;
+  }
+  .brand {
+    min-width: 0;
+    gap: 7px;
+  }
+  .brand-logo {
+    width: 40px;
+    height: 40px;
+  }
+  .brand-name {
+    font-size: 8px;
+    letter-spacing: 0.1em;
+  }
+  .brand-name b {
+    font-size: 8px;
+    letter-spacing: 0.18em;
+  }
+  .header-controls {
+    gap: 8px;
+  }
+}

@@ -1,6 +1,9 @@
 const EDE = {
   phone: "601158883287",
-  lang: localStorage.getItem("ede-language") || "ms",
+  lang:
+    localStorage.getItem("emyDahliaLanguage") ||
+    localStorage.getItem("ede-language") ||
+    "ms",
 };
 
 function t(node) {
@@ -8,6 +11,19 @@ function t(node) {
 }
 function applyLanguage() {
   document.documentElement.lang = EDE.lang;
+  document.querySelectorAll("[data-menu]").forEach((button) => {
+    const open = button.getAttribute("aria-expanded") === "true";
+    button.setAttribute(
+      "aria-label",
+      EDE.lang === "en"
+        ? open
+          ? "Close navigation"
+          : "Open navigation"
+        : open
+          ? "Tutup navigasi"
+          : "Buka navigasi",
+    );
+  });
   document.querySelectorAll("[data-site-nav]").forEach((nav) => {
     nav.setAttribute(
       "aria-label",
@@ -36,9 +52,9 @@ function nav() {
   const items = [
     ["index.html", "Utama", "Home"],
     ["siri-cahaya.html", "Buku", "Books"],
-    ["ghostwriting.html", "Studio Penulisan", "Writing Studio"],
-    ["kisah-saya.html", "Tentang", "About"],
-    ["wakaf-sudut-cahaya.html", "Komuniti", "Community"],
+    ["ghostwriting.html", "Dunia Penulisan", "World of Writing"],
+    ["profile-penulis.html", "Tentang", "About"],
+    ["jejak-cahaya.html", "Jejak Cahaya", "Trails of Light"],
     ["services.html", "Hubungi", "Contact"],
   ];
   document.querySelectorAll("header .brand").forEach((brand) => {
@@ -51,6 +67,7 @@ function nav() {
     }
   });
   document.querySelectorAll("[data-site-nav]").forEach((nav) => {
+    nav.id = "mainNav";
     nav.setAttribute(
       "aria-label",
       EDE.lang === "en" ? "Main navigation" : "Navigasi utama",
@@ -64,17 +81,36 @@ function nav() {
   });
 }
 function shell() {
-  document.querySelectorAll("[data-menu]").forEach((button) =>
+  document.querySelectorAll("[data-menu]").forEach((button) => {
     button.addEventListener("click", () => {
       const nav = button.closest("header").querySelector("nav");
       const open = nav.classList.toggle("open");
       button.setAttribute("aria-expanded", String(open));
-    }),
-  );
+      applyLanguage();
+    });
+  });
+  document.querySelectorAll("[data-site-nav]").forEach((nav) => {
+    const closeMenu = () => {
+      nav.classList.remove("open");
+      const button = nav.closest("header").querySelector("[data-menu]");
+      if (!button) return;
+      button.setAttribute("aria-expanded", "false");
+      applyLanguage();
+    };
+    nav.addEventListener("click", (event) => {
+      if (event.target instanceof HTMLAnchorElement) closeMenu();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && nav.classList.contains("open")) {
+        closeMenu();
+        nav.closest("header").querySelector("[data-menu]")?.focus();
+      }
+    });
+  });
   document.querySelectorAll("[data-language]").forEach((button) =>
     button.addEventListener("click", () => {
       EDE.lang = button.dataset.language;
-      localStorage.setItem("ede-language", EDE.lang);
+      localStorage.setItem("emyDahliaLanguage", EDE.lang);
       applyLanguage();
     }),
   );

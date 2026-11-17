@@ -25,9 +25,9 @@
             src="assets/logo.jpeg"
             alt="Emy Dahlia Empire"
           />
-          EMY DAHLIA <b>EMPIRE</b>
+          <span class="brand-name">EMY DAHLIA <b>EMPIRE</b></span>
         </a>
-        <nav class="site-nav" data-site-nav></nav>
+        <nav class="site-nav" id="mainNav" data-site-nav></nav>
         <div class="actions">
           <div class="lang">
             <button data-language="ms">BM</button>
@@ -41,12 +41,14 @@
             >Tanya Sekarang</a
           >
           <button
-            class="menu"
+            class="menu-toggle"
             data-menu
-            aria-label="Menu"
+            type="button"
+            aria-label="Buka navigasi"
             aria-expanded="false"
+            aria-controls="mainNav"
           >
-            Menu
+            <span></span><span></span>
           </button>
         </div>
       </div>
@@ -93,9 +95,9 @@
             <a
               class="button ghost"
               href="ghostwriting.html"
-              data-ms="Terokai Ghostwriting"
-              data-en="Explore Ghostwriting Services"
-              >Terokai Ghostwriting</a
+              data-ms="Terokai Dunia Penulisan"
+              data-en="Explore World of Writing"
+              >Terokai Dunia Penulisan</a
             >
           </div>
         </div>
@@ -180,7 +182,7 @@
       <section class="section alt ghostwriting-feature">
         <div class="wrap ghostwriting-feature-inner">
           <div class="ghostwriting-feature-copy">
-            <p class="overline">Ghostwriting</p>
+            <p class="overline">Buah Fikiran anda boleh menjadi sebuah karya</p>
             <h2
               data-ms="Idea anda boleh bermula sebagai sebuah manuskrip."
               data-en="Your idea can begin as a manuscript."
@@ -197,9 +199,9 @@
             <a
               class="button gold"
               href="ghostwriting.html"
-              data-ms="Kenali Perkhidmatan"
-              data-en="Discover Our Services"
-              >Kenali Perkhidmatan</a
+              data-ms="Dunia penulisan"
+              data-en="World of WritingS"
+              >Dunia Penulisan </a
             >
           </div>
           <img
@@ -259,9 +261,13 @@
             “Apabila buku menemukan pembacanya, manfaatnya boleh terus bergerak
             dari satu tangan ke satu ruang bacaan.”
           </p>
-          <a class="button gold" href="wakaf-sudut-cahaya.html"
-            >Wakaf Sudut Cahaya</a
-          >
+          <a
+              class="button gold"
+              href="jejak-cahaya.html"
+              data-ms="Jejak Cahaya"
+              data-en="Explore Trails of Light"
+              >Jejak Cahaya</a
+            >
         </div>
       </section>
     </main>

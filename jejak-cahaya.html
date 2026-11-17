@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Wakaf Sudut Cahaya community initiative by Emy Dahlia Empire."
+    />
+    <title>Community | Emy Dahlia Empire</title>
+    <link rel="stylesheet" href="site.css" />
+    <script src="site.js" defer></script>
+    <script src="footer.js" defer></script>
+  </head>
+  <body>
+    <header class="site-head">
+      <div class="wrap head-inner">
+        <a class="brand" href="index.html">
+          <img class="brand-logo" src="assets/logo.jpeg" alt="Emy Dahlia Empire" />
+          <span class="brand-name">EMY DAHLIA <b>EMPIRE</b></span>
+        </a>
+        <nav class="site-nav" id="mainNav" data-site-nav></nav>
+        <div class="actions">
+          <div class="lang">
+            <button data-language="ms">BM</button
+            ><button data-language="en">EN</button>
+          </div>
+          <a
+            class="button gold"
+            href="services.html"
+            data-ms="Tanya Sekarang"
+            data-en="Enquire Now"
+            >Tanya Sekarang</a
+          ><button
+            class="menu-toggle"
+            data-menu
+            type="button"
+            aria-label="Buka navigasi"
+            aria-expanded="false"
+            aria-controls="mainNav"
+          ><span></span><span></span></button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="page-hero" aria-label="Jejak Cahaya">
+        <div class="wrap hero-layout">
+          <div class="hero-copy">
+            <p class="overline" data-ms="Inisiatif komuniti" data-en="Community initiative">
+              THE JOURNEY OF LIGHT
+            </p>
+            <h1>Jejak Cahaya</h1>
+            <div class="hero-divider" aria-hidden="true"></div>
+            <p class="hero-quote">
+              Melangkau Halaman,<br />
+              Menyentuh Kehidupan.
+            </p>
+            <p class="hero-note">
+              Perjalanan sebuah karya tidak berhenti pada halaman; ia terus
+              menyentuh hati dan mengubah kehidupan.
+            </p>
+            <a class="button gold hero-button" href="services.html?project=wakaf"
+              >TEROKAI JEJAK CAHAYA</a
+            >
+          </div>
+          <div class="hero-visual">
+            <img
+              class="hero-image"
+              src="assets/journey.jpeg"
+              alt="Journey of light, a community initiative by Emy Dahlia Empire"
+            />
+          </div>
+        </div>
+
+        <style>
+          .page-hero {
+            background: #2c221d;
+            color: #f5efe8;
+            padding: 3.5rem 0 2rem;
+          }
+
+          .page-hero .wrap.hero-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.25fr) minmax(340px, 0.95fr);
+            align-items: center;
+            gap: 2.5rem;
+            max-width: 1380px;
+          }
+
+          .page-hero .hero-copy {
+            width: auto;
+            min-width: 0;
+            margin: 0;
+            padding: 1rem 0 1rem 0.25rem;
+          }
+
+          .page-hero .overline {
+            margin: 0 0 1.25rem;
+            font-size: 1.05rem;
+            letter-spacing: 0.38rem;
+            text-transform: uppercase;
+            color: rgba(245, 239, 232, 0.8);
+            font-family: Georgia, "Times New Roman", serif;
+          }
+
+          .page-hero h1 {
+            margin: 0;
+            font-size: clamp(4rem, 6vw, 8rem);
+            line-height: 0.95;
+            letter-spacing: -0.06em;
+            color: #f6f0eb;
+            font-weight: 500;
+            font-family: Georgia, "Times New Roman", serif;
+          }
+
+          .page-hero .hero-divider {
+            width: 100%;
+            max-width: 24rem;
+            border-top: 2px solid rgba(245, 239, 232, 0.8);
+            margin: 1.6rem 0 1.8rem;
+          }
+
+          .page-hero .hero-quote {
+            margin: 0;
+            font-size: clamp(2rem, 3vw, 3.4rem);
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+            color: #f6f0eb;
+            font-style: italic;
+            font-family: Georgia, "Times New Roman", serif;
+          }
+
+          .page-hero .hero-note {
+            margin: 1.6rem 0 2rem;
+            max-width: 36rem;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: rgba(245, 239, 232, 0.82);
+          }
+
+          .page-hero .hero-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 3.5rem;
+            padding: 0.9rem 1.5rem;
+            color: #2f221d;
+            background: #d2b88c;
+            border: 0;
+            border-radius: 0;
+            font-size: 0.94rem;
+            letter-spacing: 0.18rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            box-shadow: none;
+          }
+
+          .page-hero .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 42rem;
+          }
+
+          .page-hero .hero-image {
+            display: block;
+            width: min(100%, 42rem);
+            height: auto;
+            max-height: 46rem;
+            object-fit: cover;
+            filter: saturate(0.85) brightness(0.82);
+            box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.18);
+          }
+
+          .wakaf-initiative {
+            max-width: 760px;
+            margin: 0 0 36px;
+          }
+
+          .wakaf-initiative h3 {
+            margin: 0 0 8px;
+            color: var(--char);
+            font: 500 clamp(28px, 3vw, 38px) / 1.1 var(--serif);
+          }
+
+          .wakaf-initiative .wakaf-tagline {
+            margin: 0 0 16px;
+            color: #806b47;
+            font: italic 22px / 1.35 var(--serif);
+          }
+
+          .wakaf-initiative > p:not(.overline):not(.wakaf-tagline) {
+            margin: 0 0 10px;
+          }
+
+          .section .wrap.split > .wakaf-example-image {
+            display: block;
+            width: min(100%, 42rem);
+            height: auto;
+            max-height: 46rem;
+            object-fit: cover;
+            filter: saturate(0.85) brightness(0.82);
+            box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.18) !important;
+            mask-image: none;
+            -webkit-mask-image: none;
+          }
+
+          .library-feature {
+            display: grid;
+            grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+            align-items: center;
+            gap: clamp(24px, 5vw, 64px);
+          }
+
+          .library-feature .section-icon {
+            display: block;
+            width: 100%;
+            max-height: 36rem;
+            height: auto;
+            margin: 0;
+            object-fit: contain;
+          }
+
+          @media (max-width: 920px) {
+            .page-hero .wrap.hero-layout {
+              grid-template-columns: 1fr;
+            }
+
+            .library-feature {
+              grid-template-columns: 1fr;
+            }
+
+            .page-hero .hero-visual {
+              min-height: unset;
+              order: -1;
+            }
+
+            .page-hero .hero-image {
+              width: min(100%, 34rem);
+            }
+          }
+        </style>
+      </section>
+      <section class="section">
+        <div class="wrap split">
+          <img
+            class="wakaf-example-image"
+            src="assets/wakafContoh.jpeg"
+            alt="Wakaf Sudut Cahaya community initiative"
+          />
+          <div>
+            <p class="overline" data-ms="Konsep" data-en="The concept">
+              Konsep
+            </p>
+            <h2
+              data-ms="Buku untuk manfaat bersama."
+              data-en="Books for shared benefit."
+            >
+              Buku untuk manfaat bersama.
+            </h2>
+            <p
+              data-ms="Wakaf Sudut Cahaya membawa tiga buku A5 Siri Cahaya bersama rak akrilik satu tingkat, stand A5, kad peringatan dan tag berkembar. Set ini disusun sebagai sudut bacaan kecil untuk ruang komuniti."
+              data-en="Wakaf Sudut Cahaya brings three A5 Siri Cahaya books with a one-tier acrylic rack, A5 stand, reminder card and double-sided tags. The set is arranged as a small reading corner for community spaces."
+            >
+              Wakaf Sudut Cahaya membawa tiga buku A5 Siri Cahaya bersama rak
+              akrilik satu tingkat, stand A5, kad peringatan dan tag berkembar.
+            </p>
+            <a
+              class="button gold"
+              href="services.html?project=wakaf"
+              data-ms="Hubungi untuk kolaborasi"
+              data-en="Contact us to collaborate"
+              >Hubungi untuk kolaborasi</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="section alt">
+        <div class="wrap">
+          <div class="section-title">
+            <p
+              class="overline"
+              data-ms="Lokasi wakaf"
+              data-en="Wakaf locations"
+            >
+              Lokasi wakaf
+            </p>
+            <h2
+              data-ms="Lokasi Wakaf Sudut Cahaya."
+              data-en="Wakaf Sudut Cahaya locations."
+            >
+              Lokasi Wakaf Sudut Cahaya.
+            </h2>
+          </div>
+          <div class="wakaf-location-list" data-wakaf-locations>
+            <div data-wakaf-location="Bukit Rimau">Bukit Rimau</div>
+            <div data-wakaf-location="Seksyen 13 Shah Alam">
+              Seksyen 13 Shah Alam
+            </div>
+            <div data-wakaf-location="Damansara Damai">Damansara Damai</div>
+            <div data-wakaf-location="Tropicana Aman">Tropicana Aman</div>
+            <div data-wakaf-location="Bukit Jalil">Bukit Jalil</div>
+            <div data-wakaf-location="Equine">Equine</div>
+            <div data-wakaf-location="Putrajaya">Putrajaya</div>
+            <div data-wakaf-location="Putra Perdana">Putra Perdana</div>
+            <div data-wakaf-location="Bandar Enstek">Bandar Enstek</div>
+            <div data-wakaf-location="Sendayan">Sendayan</div>
+            <div data-wakaf-location="Setia Alam">Setia Alam</div>
+            <div data-wakaf-location="Sri Gombak">Sri Gombak</div>
+            <div data-wakaf-location="Wangsa Maju">Wangsa Maju</div>
+          </div>
+        </div>
+      </section>
+      <section class="section alt">
+        <div class="wrap">
+          <p
+            class="overline"
+            data-ms="Kehadiran perpustakaan"
+            data-en="Library presence"
+          >
+            Kehadiran perpustakaan
+          </p>
+          <div class="library-feature">
+            <img
+              class="section-icon"
+              src="assets/rakContoh.jpeg"
+              alt=""
+              aria-hidden="true"
+            />
+            <div class="library-feature-copy">
+              <h2
+                data-ms="Siri Cahaya di rak pembaca."
+                data-en="Siri Cahaya on readers’ shelves."
+              >
+                Siri Cahaya di rak pembaca.
+              </h2>
+              <article class="notice wakaf-initiative">
+                <p
+                  class="overline"
+                  data-ms="INISIATIF AMAL JARIAH"
+                  data-en="ONGOING CHARITY INITIATIVE"
+                >
+                  INISIATIF AMAL JARIAH
+                </p>
+                <h3>Wakaf Sudut Cahaya</h3>
+                <p
+                  class="wakaf-tagline"
+                  data-ms="Satu Buku, Satu Hati, Seribu Cahaya."
+                  data-en="One Book, One Heart, a Thousand Lights."
+                >
+                  Satu Buku, Satu Hati, Seribu Cahaya.
+                </p>
+                <p
+                  data-ms="Kita mungkin tidak mengenali siapa yang akan membacanya, tetapi Allah mengetahui hati siapa yang akan disentuh melaluinya."
+                  data-en="We may not know who will read it, but Allah knows whose heart will be touched by it."
+                >
+                  Kita mungkin tidak mengenali siapa yang akan membacanya,
+                  tetapi Allah mengetahui hati siapa yang akan disentuh
+                  melaluinya.
+                </p>
+                <p
+                  data-ms="Semoga setiap naskhah yang diwakafkan menjadi asbab ilmu yang bermanfaat dan amal jariah yang terus mengalir."
+                  data-en="May every donated copy become a means of beneficial knowledge and ongoing charity."
+                >
+                  Semoga setiap naskhah yang diwakafkan menjadi asbab ilmu yang
+                  bermanfaat dan amal jariah yang terus mengalir.
+                </p>
+              </article>
+            </div>
+          </div>
+          <div class="books">
+            <article class="book">
+              <h3>Perpustakaan Awam Raja Tun Uda</h3>
+              <a href="https://www.ppas.gov.my/" target="_blank" rel="noopener"
+                >Visit library →</a
+              >
+            </article>
+            <article class="book">
+              <h3>Perpustakaan Awam Pahang</h3>
+              <a
+                href="https://pahanglibrary.gov.my/"
+                target="_blank"
+                rel="noopener"
+                >Visit library →</a
+              >
+            </article>
+            <article class="book">
+              <h3>Perpustakaan Terengganu</h3>
+              <a
+                href="https://www.trglib.gov.my/"
+                target="_blank"
+                rel="noopener"
+                >Visit library →</a
+              >
+            </article>
+          </div>
+          <p
+            class="notice"
+            data-ms="Lokasi Wakaf / Aurora dan angka inisiatif yang berubah mengikut masa dikekalkan sebagai maklumat yang perlu disahkan terus dengan Emy Dahlia Empire. Rekod sedia ada bertarikh 25 Ogos 2026."
+            data-en="Wakaf / Aurora locations and time-sensitive initiative figures are retained as information to verify directly with Emy Dahlia Empire. The existing record is dated 25 August 2026."
+          >
+            Lokasi Wakaf / Aurora dan angka inisiatif yang berubah mengikut masa
+            dikekalkan sebagai maklumat yang perlu disahkan terus dengan Emy
+            Dahlia Empire. Rekod sedia ada bertarikh 25 Ogos 2026.
+          </p>
+        </div>
+      </section>
+    </main>
+    <div data-footer></div>
+  </body>
+</html>
