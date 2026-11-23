@@ -9,7 +9,9 @@
     />
     <title>Books | Emy Dahlia Empire</title>
     <link rel="stylesheet" href="../../css/site.css" />
+    <link rel="stylesheet" href="../../css/siri-shelf.css" />
     <script src="../../js/site.js" defer></script>
+    <script src="../../js/siri-shelf.js" defer></script>
     <script src="../../js/footer.js" defer></script>
   </head>
   <body>
@@ -568,10 +570,78 @@
       </section>
       <section class="section alt">
         <div class="wrap">
-          <div class="tetralogy-package">
-            <div class="tetralogy-covers" aria-label="Four Siri Cahaya books">
-              <img src="assets/tetralogi.jpg" alt="Tetralogi" />
-        s</div>
+          <div class="tetralogy-package siri-package">
+
+<div class="tetralogy-covers">
+              <div class="siri-shelf" data-siri-shelf data-lights="on">
+                <img
+                  class="siri-shelf-art"
+                  src="../../assets/shelf/Shelf On.png"
+                  data-shelf-art
+                  alt="Rak hiasan Siri Cahaya dengan dua tanglung bercahaya"
+                />
+
+                <div class="siri-shelf-books" aria-label="Pilih buku untuk melihat kulit hadapan, belakang dan tulang buku">
+                  <button class="siri-book" type="button" data-book data-title="Ya Allah, Pilihlah Mereka" aria-pressed="false" aria-label="Ya Allah, Pilihlah Mereka. Pilih untuk melihat kulit hadapan dan belakang.">
+                    <span class="siri-book-3d">
+                      <span class="siri-book-face siri-book-front"><img src="../../assets/books/pilihlah-front.jpg" alt="Kulit hadapan Ya Allah, Pilihlah Mereka" /></span>
+                      <span class="siri-book-face siri-book-spine"><img src="../../assets/books/pilihlah-spine.jpg" alt="Kulit sisi Ya Allah, Pilihlah Mereka" /></span>
+                      <span class="siri-book-face siri-book-back"><img src="../../assets/books/pilihlah-back.jpg" alt="Kulit belakang Ya Allah, Pilihlah Mereka" /></span>
+                      <span class="siri-book-pages" aria-hidden="true"></span>
+                    </span>
+                    <img class="siri-book-spine-display" src="../../assets/books/pilihlah-spine.jpg" alt="" />
+                    <span class="siri-book-number">01</span>
+                  </button>
+
+                  <button class="siri-book" type="button" data-book data-title="Cahaya Sebatang Tongkat" aria-pressed="false" aria-label="Cahaya Sebatang Tongkat. Pilih untuk melihat kulit hadapan dan belakang.">
+                    <span class="siri-book-3d">
+                      <span class="siri-book-face siri-book-front"><img src="../../assets/books/sebatang-front.jpg" alt="Kulit hadapan Cahaya Sebatang Tongkat" /></span>
+                      <span class="siri-book-face siri-book-spine"><img src="../../assets/books/sebatang-spine.jpg" alt="Kulit sisi Cahaya Sebatang Tongkat" /></span>
+                      <span class="siri-book-face siri-book-back"><img src="../../assets/books/sebatang-back.jpg" alt="Kulit belakang Cahaya Sebatang Tongkat" /></span>
+                      <span class="siri-book-pages" aria-hidden="true"></span>
+                    </span>
+                    <img class="siri-book-spine-display" src="../../assets/books/sebatang-spine.jpg" alt="" />
+                    <span class="siri-book-number">02</span>
+                  </button>
+
+                  <button class="siri-book" type="button" data-book data-title="Perban Cahaya" aria-pressed="false" aria-label="Perban Cahaya. Pilih untuk melihat kulit hadapan dan belakang.">
+                    <span class="siri-book-3d">
+                      <span class="siri-book-face siri-book-front"><img src="../../assets/books/perban-front.jpg" alt="Kulit hadapan Perban Cahaya" /></span>
+                      <span class="siri-book-face siri-book-spine"><img src="../../assets/books/perban-spine.jpg" alt="Kulit sisi Perban Cahaya" /></span>
+                      <span class="siri-book-face siri-book-back"><img src="../../assets/books/perban-back.jpg" alt="Kulit belakang Perban Cahaya" /></span>
+                      <span class="siri-book-pages" aria-hidden="true"></span>
+                    </span>
+                    <img class="siri-book-spine-display" src="../../assets/books/perban-spine.jpg" alt="" />
+                    <span class="siri-book-number">03</span>
+                  </button>
+
+                  <button class="siri-book" type="button" data-book data-title="Mulut, Telinga dan Hati" aria-pressed="false" aria-label="Mulut, Telinga dan Hati. Pilih untuk melihat kulit hadapan dan belakang.">
+                    <span class="siri-book-3d">
+                      <span class="siri-book-face siri-book-front"><img src="../../assets/books/mulut-front.jpg" alt="Kulit hadapan Mulut, Telinga dan Hati" /></span>
+                      <span class="siri-book-face siri-book-spine"><img src="../../assets/books/mulut-spine.jpg" alt="Kulit sisi Mulut, Telinga dan Hati" /></span>
+                      <span class="siri-book-face siri-book-back"><img src="../../assets/books/mulut-back.jpg" alt="Kulit belakang Mulut, Telinga dan Hati" /></span>
+                      <span class="siri-book-pages" aria-hidden="true"></span>
+                    </span>
+                    <img class="siri-book-spine-display" src="../../assets/books/mulut-spine.jpg" alt="" />
+                    <span class="siri-book-number">04</span>
+                  </button>
+                </div>
+
+                <div class="siri-shelf-controls">
+                  <button class="siri-light-toggle" type="button" data-light-toggle aria-pressed="true">
+                    <span class="siri-light-dot" aria-hidden="true"></span>
+                    <span data-light-label data-ms="Lampu menyala" data-en="Lights on">Lampu menyala</span>
+                  </button>
+                  <div class="siri-cover-toggle" role="group" aria-label="Pilih sisi kulit buku">
+                    <button type="button" data-cover-side="front" class="is-active" aria-pressed="true" data-ms="Hadapan" data-en="Front">Hadapan</button>
+                    <button type="button" data-cover-side="back" aria-pressed="false" data-ms="Belakang" data-en="Back">Belakang</button>
+                  </div>
+                </div>
+                <p class="siri-shelf-hint" data-ms="Pilih buku untuk melihat kulit hadapan dan belakang." data-en="Select a book to explore its front and back cover.">Pilih buku untuk melihat kulit hadapan dan belakang.</p>
+                <p class="siri-shelf-status" data-shelf-status aria-live="polite">Pilih sebuah buku untuk meneroka kulitnya.</p>
+              </div>
+            </div>
+
             <div class="tetralogy-copy">
               <p
                 class="overline"

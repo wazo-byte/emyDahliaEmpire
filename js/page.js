@@ -52,10 +52,10 @@ const pageTranslations = {
     "wakaf.title": "Wakaf Sudut Cahaya",
     "wakaf.intro":
       "Apabila buku menemukan pembacanya, manfaatnya boleh terus bergerak dari satu tangan ke satu ruang bacaan.",
-    "wakaf.conceptLabel": "Konsep",
-    "wakaf.conceptTitle": "Buku untuk manfaat bersama.",
+    "wakaf.conceptLabel": "INISIATIF AMAL JARIAH",
+    "wakaf.conceptTitle": "Satu Buku, Satu Hati, Seribu Cahaya.",
     "wakaf.concept":
-      "Wakaf Sudut Cahaya membawa tiga buku A5 Siri Cahaya bersama rak akrilik satu tingkat, stand A5, kad peringatan dan tag berkembar. Set ini disusun sebagai sudut bacaan kecil yang mudah ditempatkan di ruang komuniti.",
+      "Kita mungkin tidak mengenali siapa yang akan membacanya, tetapi Allah mengetahui hati siapa yang akan disentuh melaluinya.",
     "wakaf.locationsLabel": "Lokasi",
     "wakaf.locationsTitle": "Antara lokasi Wakaf / Aurora",
     "wakaf.closing":
@@ -103,10 +103,10 @@ const pageTranslations = {
     "wakaf.title": "Wakaf Sudut Cahaya",
     "wakaf.intro":
       "When books find their readers, their benefit can continue moving from one hand into shared reading spaces.",
-    "wakaf.conceptLabel": "Concept",
-    "wakaf.conceptTitle": "Books for shared benefit.",
+    "wakaf.conceptLabel": "Amal jariah initiative",
+    "wakaf.conceptTitle": "One Book, One Heart, Thousand Lights.",
     "wakaf.concept":
-      "Wakaf Sudut Cahaya includes three A5 Siri Cahaya books, a one-tier acrylic rack, an A5 stand, a reminder card and double-sided tags. The set is designed as a small reading corner for community spaces.",
+      "We may not know who will read it, but Allah knows whose hearts will be touched by it.",
     "wakaf.locationsLabel": "Locations",
     "wakaf.locationsTitle": "Participating Wakaf / Aurora locations",
     "wakaf.closing":

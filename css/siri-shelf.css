@@ -1,0 +1,203 @@
+
+/* Siri Cahaya display — matched to the existing cream, burgundy and antique-gold identity. */
+.siri-shelf {
+  position: relative;
+  width: min(100%, 760px);
+  margin-inline: auto;
+  isolation: isolate;
+  color: #4b3528;
+}
+.siri-package {
+  grid-template-columns: minmax(0, 3fr) minmax(220px, 1fr);
+  gap: 3%;
+  padding: clamp(20px, 3vw, 40px);
+}
+.siri-package .tetralogy-covers {
+  display: block;
+}
+.tetralogy-covers .siri-shelf-art {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1040 / 1512;
+  object-fit: contain;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+.siri-shelf-books {
+  position: absolute;
+  z-index: 2;
+  left: 12%;
+  right: 12%;
+  top: 34%;
+  height: 43%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: clamp(3px, .8vw, 8px);
+  perspective: 1100px;
+}
+.siri-book {
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+  width: auto;
+  height: 84%;
+  aspect-ratio: 1 / 24;
+  padding: 0;
+  border: 0;
+  border-radius: 2px;
+  background: transparent;
+  cursor: pointer;
+  transform: translateY(0);
+  transition: transform .28s ease, filter .28s ease;
+  outline-offset: 4px;
+}
+.siri-book:nth-child(2), .siri-book:nth-child(4) { height: 91%; }
+.siri-book:hover, .siri-book:focus-visible, .siri-book.is-selected {
+  transform: translateY(-9px);
+  z-index: 5;
+}
+.siri-book.is-selected {
+  height: 88%;
+  aspect-ratio: 0.675;
+}
+.siri-book-3d {
+  position: absolute;
+  inset: 0;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  --book-depth: clamp(4px, 1vw, 12px);
+  transform-style: preserve-3d;
+  transition: transform 1.1s cubic-bezier(.45,0,.55,1);
+}
+.siri-book.is-selected .siri-book-3d {
+  visibility: visible;
+  opacity: 1;
+}
+.siri-book.is-back .siri-book-3d { transform: rotateY(180deg); }
+.siri-book-spine-display {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  object-fit: fill;
+  box-shadow: none !important;
+  filter: drop-shadow(3px 4px 3px rgba(45,25,13,.3));
+  transition: opacity .3s ease;
+}
+.siri-book.is-selected .siri-book-spine-display {
+  opacity: 0;
+}
+.siri-book-face {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+  border-radius: 2px 3px 3px 2px;
+  background: #e8decd;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  filter: drop-shadow(3px 4px 3px rgba(45,25,13,.24));
+}
+.siri-book-face img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: none !important;
+}
+.siri-book-face.siri-book-spine {
+  inset: 0 auto 0 calc(var(--book-depth) * -0.5);
+  width: var(--book-depth);
+  border-radius: 0;
+  transform: rotateY(-90deg);
+}
+.siri-book-face.siri-book-spine img { object-fit: fill; }
+.siri-book-front { transform: translateZ(calc(var(--book-depth) * 0.5)); }
+.siri-book-back { transform: rotateY(180deg) translateZ(calc(var(--book-depth) * 0.5)); }
+.siri-book-pages {
+  position: absolute;
+  top: 2px;
+  right: -4px;
+  width: 4px;
+  height: calc(100% - 4px);
+  background: repeating-linear-gradient(90deg,#cdbd9e 0 1px,#f6efdf 1px 2px);
+  transform: translateZ(-2px);
+}
+.siri-book-number {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 7px);
+  text-align: center;
+  color: #9d743b;
+  font: 600 9px/1 "DM Sans", sans-serif;
+  letter-spacing: .2em;
+}
+.siri-shelf-controls {
+  position: absolute;
+  z-index: 4;
+  left: 0;
+  right: 0;
+  bottom: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.siri-light-toggle, .siri-cover-toggle button {
+  border: 1px solid rgba(164,122,62,.72);
+  border-radius: 999px;
+  padding: 8px 12px;
+  background: rgba(246,241,232,.96);
+  color: #67472c;
+  font: 600 10px/1.2 "DM Sans",sans-serif;
+  letter-spacing: .04em;
+  cursor: pointer;
+}
+.siri-light-toggle { display: inline-flex; align-items: center; gap: 7px; }
+.siri-light-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #e5aa42; box-shadow: 0 0 8px 2px rgba(229,170,66,.65);
+}
+.siri-shelf[data-lights="off"] .siri-light-dot {
+  background: #82776b; box-shadow: none;
+}
+.siri-cover-toggle {
+  display: inline-flex;
+  gap: 3px;
+  padding: 3px;
+  border: 1px solid rgba(164,122,62,.55);
+  border-radius: 999px;
+  background: rgba(246,241,232,.92);
+}
+.siri-cover-toggle button { border: 0; background: transparent; padding: 6px 10px; }
+.siri-cover-toggle button.is-active { background: #642f31; color: #fff8e9; }
+.siri-shelf-hint, .siri-shelf-status {
+  margin: 10px 0 0;
+  text-align: center;
+  color: #756756;
+  font: 11px/1.5 "DM Sans",sans-serif;
+}
+.siri-shelf-status { min-height: 17px; color: #9a743d; font-style: italic; }
+@media (max-width: 780px) {
+  .siri-package { grid-template-columns: 1fr; }
+  .siri-shelf { max-width: 620px; }
+  .siri-shelf-books { left: 12%; right: 12%; gap: 5px; }
+  .siri-shelf-controls { bottom: 6.5%; }
+}
+@media (max-width: 420px) {
+  .siri-shelf { max-width: 100%; }
+  .siri-shelf-books { left: 11%; right: 11%; gap: 3px; }
+  .siri-shelf-controls { bottom: 5.5%; gap: 5px; }
+  .siri-light-toggle, .siri-cover-toggle button { padding: 7px 9px; font-size: 9px; }
+  .siri-shelf-hint, .siri-shelf-status { font-size: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .siri-book, .siri-book-3d { transition: none; }
+}
