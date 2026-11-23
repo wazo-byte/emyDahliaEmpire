@@ -1,26 +1,29 @@
 (function () {
+  const SCRIPT_URL = new URL(document.currentScript?.src || "js/navigation.js", window.location.href);
   const page = window.location.pathname.split("/").pop() || "index.html";
+  const scriptUrl = SCRIPT_URL;
+  const rootUrl = new URL("../", scriptUrl);
   const links = [
     { key: "nav.home", href: "index.html", pages: ["index.html", ""] },
-    { key: "nav.books", href: "siri-cahaya.html", pages: ["siri-cahaya.html"] },
+    { key: "nav.books", href: "pages/books/siri-cahaya.html", pages: ["siri-cahaya.html"] },
     {
       key: "nav.ghostwrite",
-      href: "ghostwriting.html",
+      href: "pages/services/ghostwriting.html",
       pages: ["ghostwriting.html"],
     },
     {
       key: "nav.about",
-      href: "kisah-saya.html",
+      href: "pages/about/kisah-saya.html",
       pages: ["kisah-saya.html"],
     },
     {
       key: "nav.wakaf",
-      href: "jejak-cahaya.html",
+      href: "pages/about/jejak-cahaya.html",
       pages: ["jejak-cahaya.html", "wakaf.html"],
     },
     {
       key: "nav.contact",
-      href: "services.html",
+      href: "pages/services/perkhidmatan.html",
       pages: ["services.html", "perkhidmatan.html"],
     },
   ];
@@ -64,7 +67,7 @@
     let enquire = controls.querySelector(".nav-enquire");
     if (!enquire) {
       enquire = document.createElement("a");
-      enquire.href = "services.html";
+      enquire.href = new URL("pages/services/perkhidmatan.html", rootUrl).href;
       enquire.className = "button button-gold nav-enquire";
       enquire.dataset.i18n = "nav.enquire";
       enquire.textContent = linkLabels["nav.enquire"];
@@ -105,7 +108,7 @@
 
     links.forEach(({ key, href, pages }) => {
       const link = document.createElement("a");
-      link.href = href;
+      link.href = new URL(href, rootUrl).href;
       link.dataset.i18n = key;
       link.textContent = linkLabels[key];
       if (pages.includes(page)) {

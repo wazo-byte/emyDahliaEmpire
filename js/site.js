@@ -1,3 +1,5 @@
+const SITE_SCRIPT_URL = new URL(document.currentScript?.src || "js/site.js", window.location.href);
+
 const EDE = {
   phone: "601158883287",
   lang:
@@ -49,19 +51,21 @@ function applyLanguage() {
 }
 function nav() {
   const page = location.pathname.split("/").pop() || "index.html";
+  const scriptUrl = SITE_SCRIPT_URL;
+  const rootUrl = new URL("../", scriptUrl);
   const items = [
     ["index.html", "Utama", "Home"],
-    ["siri-cahaya.html", "Buku", "Books"],
-    ["ghostwriting.html", "Dunia Penulisan", "World of Writing"],
-    ["kisah-saya.html", "Tentang", "About"],
-    ["jejak-cahaya.html", "Jejak Cahaya", "Trails of Light"],
-    ["services.html", "Hubungi", "Contact"],
+    ["pages/books/siri-cahaya.html", "Buku", "Books"],
+    ["pages/services/ghostwriting.html", "Dunia Penulisan", "World of Writing"],
+    ["pages/about/kisah-saya.html", "Tentang", "About"],
+    ["pages/about/jejak-cahaya.html", "Jejak Cahaya", "Trails of Light"],
+    ["pages/services/perkhidmatan.html", "Hubungi", "Contact"],
   ];
   document.querySelectorAll("header .brand").forEach((brand) => {
     if (!brand.querySelector(".brand-logo")) {
       const logo = document.createElement("img");
       logo.className = "brand-logo";
-      logo.src = "assets/logo.jpeg";
+      logo.src = new URL("../assets/logos/logo.jpeg", SITE_SCRIPT_URL).href;
       logo.alt = "Emy Dahlia Empire";
       brand.prepend(logo);
     }
@@ -75,7 +79,7 @@ function nav() {
     nav.innerHTML = items
       .map(
         ([href, ms, en]) =>
-          `<a href="${href}"${href === page ? ' aria-current="page"' : ""} data-ms="${ms}" data-en="${en}">${EDE.lang === "en" ? en : ms}</a>`,
+          `<a href="${new URL(href, rootUrl).href}"${href.split("/").pop() === page ? ' aria-current="page"' : ""} data-ms="${ms}" data-en="${en}">${EDE.lang === "en" ? en : ms}</a>`,
       )
       .join("");
   });

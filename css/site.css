@@ -116,7 +116,7 @@
   inset: 0;
   z-index: -2;
   min-height: 0 !important;
-  background-image: url("assets/hero-portrait.jpg") !important;
+  background-image: url("../assets/backgrounds/hero-portrait.jpg") !important;
   background-position: center !important;
 }
 .hero::before {
@@ -322,7 +322,7 @@ a {
 }
 .hero-media {
   min-height: 590px;
-  background: url("assets/hero_bg.jpeg") center/cover;
+  background: url("../assets/backgrounds/hero_bg.jpeg") center/cover;
 }
 .overline {
   color: #8d713e;

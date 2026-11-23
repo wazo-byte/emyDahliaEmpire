@@ -137,7 +137,7 @@ const translations = {
     "reader.open": "Buka skrin penuh ↗",
     "reader.close": "Tutup",
     "reader.fallback":
-      'Pelayar anda tidak dapat memaparkan PDF ini. <a href="assets/profilPenulis.pdf" target="_blank" rel="noopener">Buka PDF</a>.',
+      'Pelayar anda tidak dapat memaparkan PDF ini. <a href="/assets/documents/profilPenulis.pdf" target="_blank" rel="noopener">Buka PDF</a>.',
     "services.eyebrow": "Ruang berkarya",
     "services.title": "Bina cerita yang <em>bermakna.</em>",
     "services.intro":
@@ -291,7 +291,7 @@ const translations = {
     "reader.open": "Open full screen ↗",
     "reader.close": "Close",
     "reader.fallback":
-      'Your browser cannot display this PDF. <a href="assets/profilPenulis.pdf" target="_blank" rel="noopener">Open the PDF</a>.',
+      'Your browser cannot display this PDF. <a href="/assets/documents/profilPenulis.pdf" target="_blank" rel="noopener">Open the PDF</a>.',
     "services.eyebrow": "A space to create",
     "services.title": "Build a story that <em>matters.</em>",
     "services.intro":

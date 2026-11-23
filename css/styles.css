@@ -157,7 +157,7 @@ img {
 .hero-photo {
   position: absolute;
   inset: 0;
-  background: url("assets/hero-portrait.jpg") center 38% / cover no-repeat;
+  background: url("../assets/backgrounds/hero-portrait.jpg") center 38% / cover no-repeat;
   filter: saturate(0.55);
 }
 .hero-overlay {
@@ -412,7 +412,7 @@ h2 em {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("assets/bg10.jpeg") center 48% / cover no-repeat;
+  background: url("../assets/backgrounds/bg10.jpeg") center 48% / cover no-repeat;
   filter: saturate(0.72);
 }
 .journey-overlay {
@@ -2028,7 +2028,7 @@ textarea:focus-visible {
 .story-hero-image {
   grid-column: 2;
   grid-row: 1;
-  background: url("assets/hero_bg.jpeg") 78% center/cover no-repeat;
+  background: url("../assets/backgrounds/hero_bg.jpeg") 78% center/cover no-repeat;
   filter: grayscale(1) contrast(0.9);
   min-height: 650px;
 }
