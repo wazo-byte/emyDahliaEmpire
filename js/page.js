@@ -33,7 +33,7 @@ const pageTranslations = {
     "nav.wakaf": "Jejak Cahaya",
     "nav.sofri": "Capt. Sofri",
     "nav.contact": "Hubungi",
-    "nav.about": "Tentang",
+    "nav.about": "Kisah Saya",
     "nav.ghostwrite": "Dunia Penulisan",
     "nav.enquire": "Tanya Sekarang",
     "footer.home": "Kembali ke laman utama",

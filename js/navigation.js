@@ -32,7 +32,7 @@
     "nav.home": "Utama",
     "nav.books": "Buku",
     "nav.ghostwrite": "Dunia Penulisan",
-    "nav.about": "Tentang",
+    "nav.about": "Kisah Saya",
     "nav.wakaf": "Jejak Cahaya",
     "nav.contact": "Hubungi",
     "nav.enquire": "Tanya Sekarang",

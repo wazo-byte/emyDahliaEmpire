@@ -57,7 +57,7 @@ function nav() {
     ["index.html", "Utama", "Home"],
     ["pages/books/siri-cahaya.html", "Buku", "Books"],
     ["pages/services/ghostwriting.html", "Dunia Penulisan", "World of Writing"],
-    ["pages/about/kisah-saya.html", "Tentang", "About"],
+    ["pages/about/kisah-saya.html", "Kisah Saya", "My Story"],
     ["pages/about/jejak-cahaya.html", "Jejak Cahaya", "Trails of Light"],
     ["pages/services/perkhidmatan.html", "Hubungi", "Contact"],
   ];

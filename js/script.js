@@ -9,7 +9,7 @@ const translations = {
     "nav.wakaf": "Jejak Cahaya",
     "nav.sofri": "Capt. Sofri",
     "nav.contact": "Hubungi",
-    "nav.about": "Tentang",
+    "nav.about": "Kisah Saya",
     "nav.biography": "Biografi",
     "nav.reviews": "Suara Pembaca",
     "nav.libraries": "Perpustakaan",

@@ -1,97 +1,172 @@
+/* Siri Cahaya bookshelf — books sized and seated to the real shelf artwork.
 
-/* Siri Cahaya display — matched to the existing cream, burgundy and antique-gold identity. */
+   How the fit works
+   -----------------
+   • .siri-shelf-stage wraps ONLY the artwork + books, so every % / cqw value
+     below is measured against the artwork, not against the controls under it.
+   • Book sizes use cqw (1cqw = 1% of the stage width), so books scale exactly
+     with the artwork at every screen size.
+   • Each spine keeps the true aspect ratio of the spine artwork (no stretching).
+   • The books' bottom edge is pinned to the shelf board with --floor-bottom.
+     The two artworks (lights on / off) are drawn a few pixels apart, so each
+     state has its own value. If the books look a hair high or low, nudge
+     --floor-bottom (bigger number = books sit higher).
+*/
 .siri-shelf {
   position: relative;
-  width: min(100%, 760px);
+  width: min(100%, 1225px);
   margin-inline: auto;
   isolation: isolate;
   color: #4b3528;
+
+  /* ---- tweak these to fine-tune the fit ---- */
+  /* Measured from the 1199 × 1312 artwork (lights on): board back edge y=917,
+     front gold edge y=957, niche walls x=120…1078. Books stand ~65% of the way
+     onto the board (y≈943). Lights off: board y=930…970, walls x=119…1088. */
+  --floor-bottom: 28.1%;      /* lights on:  gap from stage bottom to where the books stand */
+  --cx: 50%;                  /* horizontal centre of the niche */
+  --spine-ratio: 0.06;        /* spine width ÷ height (artwork is 0.0416; a bit fatter so spines stay readable) */
+  --cover-ratio: 0.675;       /* cover width ÷ height (≈1040 × 1537 cover artwork) */
+  --book-gap: 0.7cqw;
+  --sel-h: 54cqw;             /* height of the book when pulled out */
 }
-.siri-package {
-  grid-template-columns: minmax(0, 3fr) minmax(220px, 1fr);
-  gap: 3%;
-  padding: clamp(20px, 3vw, 40px);
+.siri-shelf[data-lights="off"] { --floor-bottom: 27.1%; --cx: 50.3%; }
+
+/* The page's own .tetralogy-* rules (site.css) were capping the shelf at a few
+   hundred px. These overrides let the shelf fill its whole grid column. */
+.siri-package > .tetralogy-covers {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0;
 }
-.siri-package .tetralogy-covers {
-  display: block;
+.siri-package .siri-shelf {
+  width: 100% !important;
+  max-width: 1225px !important;
 }
+.siri-package .siri-shelf-stage { width: 100%; }
+.siri-package .tetralogy-covers .siri-shelf-art {
+  width: 100% !important;
+  max-width: none !important;
+  height: auto !important;
+}
+
+/* Stage = the artwork box. Books are positioned inside this. */
+.siri-shelf-stage {
+  position: relative;
+  container-type: inline-size;
+}
+
+/* Let the artwork keep its natural aspect ratio. */
 .tetralogy-covers .siri-shelf-art {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 1040 / 1512;
+  aspect-ratio: auto;
   object-fit: contain;
   box-shadow: none !important;
   border: 0 !important;
 }
+
+/* Books stand in one row, centred in the niche, resting on the board. */
 .siri-shelf-books {
   position: absolute;
   z-index: 2;
-  left: 12%;
-  right: 12%;
-  top: 34%;
-  height: 43%;
+  left: calc(var(--cx) - 40%);
+  width: 80%;
+  bottom: var(--floor-bottom);
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  gap: clamp(3px, .8vw, 8px);
-  perspective: 1100px;
+  gap: var(--book-gap);
+  perspective: 1400px;
 }
+
 .siri-book {
   position: relative;
   display: block;
   flex: 0 0 auto;
-  width: auto;
-  height: 84%;
-  aspect-ratio: 1 / 24;
+  height: var(--h, 35cqw);
+  aspect-ratio: var(--spine-ratio);
   padding: 0;
   border: 0;
-  border-radius: 2px;
+  border-radius: 1px;
   background: transparent;
   cursor: pointer;
   transform: translateY(0);
-  transition: transform .28s ease, filter .28s ease;
-  outline-offset: 4px;
+  transition: transform .32s ease;
+  outline-offset: 3px;
 }
-.siri-book:nth-child(2), .siri-book:nth-child(4) { height: 91%; }
-.siri-book:hover, .siri-book:focus-visible, .siri-book.is-selected {
-  transform: translateY(-9px);
-  z-index: 5;
+/* Slightly different heights so the row looks natural. The four spines together
+   are only ~8cqw wide, so the group stands in the gap between the two lanterns. */
+.siri-book:nth-child(1) { --h: 34cqw; }
+.siri-book:nth-child(2) { --h: 37.5cqw; }
+.siri-book:nth-child(3) { --h: 36cqw; }
+.siri-book:nth-child(4) { --h: 35cqw; }
+
+/* Enlarged tap/click target — the spines are narrow. */
+.siri-book::before {
+  content: "";
+  position: absolute;
+  inset: -2% -0.35cqw;
 }
-.siri-book.is-selected {
-  height: 88%;
-  aspect-ratio: 0.675;
+
+.siri-book:hover,
+.siri-book:focus-visible {
+  transform: translateY(-1.2cqw);
+  z-index: 4;
 }
+
+/* The selected book keeps its slot on the shelf (so the row doesn't collapse);
+   its 3D copy is what gets pulled out and centred. */
+.siri-book.is-selected,
+.siri-book.is-selected:hover,
+.siri-book.is-selected:focus-visible {
+  transform: none;
+  z-index: 8;
+}
+
+/* Idle: hidden. Selected: a large 3D book centred on the shelf (--pop-x is set by JS). */
 .siri-book-3d {
   position: absolute;
-  inset: 0;
+  left: 50%;
+  bottom: 0;
   display: block;
+  width: calc(var(--sel-h) * var(--cover-ratio));
+  height: var(--sel-h);
   visibility: hidden;
   opacity: 0;
-  --book-depth: clamp(4px, 1vw, 12px);
+  --book-depth: calc(var(--sel-h) * var(--spine-ratio));
+  transform: translateX(calc(-50% + var(--pop-x, 0px)));
   transform-style: preserve-3d;
-  transition: transform 1.1s cubic-bezier(.45,0,.55,1);
+  transition: transform .85s cubic-bezier(.2,.72,.2,1), opacity .25s ease;
+  pointer-events: none;
 }
 .siri-book.is-selected .siri-book-3d {
   visibility: visible;
   opacity: 1;
+  pointer-events: auto;
 }
-.siri-book.is-back .siri-book-3d { transform: rotateY(180deg); }
+.siri-book.is-back .siri-book-3d {
+  transform: translateX(calc(-50% + var(--pop-x, 0px))) rotateY(180deg);
+}
+
+/* Idle state shows the spine artwork at its true proportions. */
 .siri-book-spine-display {
   position: absolute;
   inset: 0;
   display: block;
   width: 100%;
   height: 100%;
-  aspect-ratio: auto;
-  object-fit: fill;
+  object-fit: fill;          /* box already has the spine's own aspect ratio */
+  border: 0 !important;
+  border-radius: 1px 2px 1px 1px;
   box-shadow: none !important;
-  filter: drop-shadow(3px 4px 3px rgba(45,25,13,.3));
-  transition: opacity .3s ease;
+  filter: drop-shadow(.3cqw .5cqw .4cqw rgba(35, 19, 12, .34));
+  transition: opacity .22s ease;
 }
-.siri-book.is-selected .siri-book-spine-display {
-  opacity: 0;
-}
+.siri-book.is-selected .siri-book-spine-display { opacity: 0; }
+
 .siri-book-face {
   position: absolute;
   inset: 0;
@@ -101,13 +176,13 @@
   background: #e8decd;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  filter: drop-shadow(3px 4px 3px rgba(45,25,13,.24));
+  filter: drop-shadow(.6cqw .9cqw .8cqw rgba(35, 19, 12, .32));
 }
 .siri-book-face img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
   box-shadow: none !important;
 }
 .siri-book-face.siri-book-spine {
@@ -117,87 +192,98 @@
   transform: rotateY(-90deg);
 }
 .siri-book-face.siri-book-spine img { object-fit: fill; }
-.siri-book-front { transform: translateZ(calc(var(--book-depth) * 0.5)); }
-.siri-book-back { transform: rotateY(180deg) translateZ(calc(var(--book-depth) * 0.5)); }
+.siri-book-front { transform: translateZ(calc(var(--book-depth) * .5)); }
+.siri-book-back { transform: rotateY(180deg) translateZ(calc(var(--book-depth) * .5)); }
+
 .siri-book-pages {
   position: absolute;
   top: 2px;
-  right: -4px;
-  width: 4px;
+  right: calc(var(--book-depth) * -0.5);
+  width: var(--book-depth);
   height: calc(100% - 4px);
-  background: repeating-linear-gradient(90deg,#cdbd9e 0 1px,#f6efdf 1px 2px);
-  transform: translateZ(-2px);
+  background: repeating-linear-gradient(90deg, #cdbd9e 0 1px, #f6efdf 1px 2px);
+  transform: rotateY(90deg);
+  transform-origin: left center;
 }
+
+/* Number sits on the front lip of the board, just under the book. */
 .siri-book-number {
   position: absolute;
-  left: 0;
-  right: 0;
-  top: calc(100% + 7px);
+  left: -1cqw;
+  right: -1cqw;
+  top: calc(100% + .3cqw);
   text-align: center;
   color: #9d743b;
-  font: 600 9px/1 "DM Sans", sans-serif;
+  font: 600 clamp(6px, .8cqw, 9px)/1 "DM Sans", sans-serif;
   letter-spacing: .2em;
+  pointer-events: none;
 }
+
+/* Controls live below the furniture, not over its lower carved panel. */
 .siri-shelf-controls {
-  position: absolute;
+  position: relative;
   z-index: 4;
-  left: 0;
-  right: 0;
-  bottom: 7%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 8px;
+  margin: 12px auto 0;
 }
-.siri-light-toggle, .siri-cover-toggle button {
-  border: 1px solid rgba(164,122,62,.72);
+.siri-light-toggle,
+.siri-cover-toggle button {
+  border: 1px solid rgba(164, 122, 62, .72);
   border-radius: 999px;
   padding: 8px 12px;
-  background: rgba(246,241,232,.96);
+  background: rgba(246, 241, 232, .96);
   color: #67472c;
-  font: 600 10px/1.2 "DM Sans",sans-serif;
+  font: 600 10px/1.2 "DM Sans", sans-serif;
   letter-spacing: .04em;
   cursor: pointer;
 }
 .siri-light-toggle { display: inline-flex; align-items: center; gap: 7px; }
 .siri-light-dot {
-  width: 7px; height: 7px; border-radius: 50%;
-  background: #e5aa42; box-shadow: 0 0 8px 2px rgba(229,170,66,.65);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #e5aa42;
+  box-shadow: 0 0 8px 2px rgba(229, 170, 66, .65);
 }
 .siri-shelf[data-lights="off"] .siri-light-dot {
-  background: #82776b; box-shadow: none;
+  background: #82776b;
+  box-shadow: none;
 }
 .siri-cover-toggle {
   display: inline-flex;
   gap: 3px;
   padding: 3px;
-  border: 1px solid rgba(164,122,62,.55);
+  border: 1px solid rgba(164, 122, 62, .55);
   border-radius: 999px;
-  background: rgba(246,241,232,.92);
+  background: rgba(246, 241, 232, .92);
 }
 .siri-cover-toggle button { border: 0; background: transparent; padding: 6px 10px; }
 .siri-cover-toggle button.is-active { background: #642f31; color: #fff8e9; }
-.siri-shelf-hint, .siri-shelf-status {
-  margin: 10px 0 0;
+
+.siri-shelf-hint,
+.siri-shelf-status {
+  margin: 8px 0 0;
   text-align: center;
   color: #756756;
-  font: 11px/1.5 "DM Sans",sans-serif;
+  font: 11px/1.5 "DM Sans", sans-serif;
 }
 .siri-shelf-status { min-height: 17px; color: #9a743d; font-style: italic; }
+
 @media (max-width: 780px) {
   .siri-package { grid-template-columns: 1fr; }
-  .siri-shelf { max-width: 620px; }
-  .siri-shelf-books { left: 12%; right: 12%; gap: 5px; }
-  .siri-shelf-controls { bottom: 6.5%; }
+  .siri-package .siri-shelf { max-width: 950px !important; }
 }
-@media (max-width: 420px) {
-  .siri-shelf { max-width: 100%; }
-  .siri-shelf-books { left: 11%; right: 11%; gap: 3px; }
-  .siri-shelf-controls { bottom: 5.5%; gap: 5px; }
+@media (max-width: 480px) {
+  .siri-shelf { --sel-h: 60cqw; --book-gap: 1cqw; }
+  .siri-book::before { inset: -2% -0.5cqw; }
+  .siri-shelf-controls { gap: 5px; margin-top: 9px; }
   .siri-light-toggle, .siri-cover-toggle button { padding: 7px 9px; font-size: 9px; }
   .siri-shelf-hint, .siri-shelf-status { font-size: 10px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .siri-book, .siri-book-3d { transition: none; }
+  .siri-book, .siri-book-3d, .siri-book-spine-display { transition: none; }
 }

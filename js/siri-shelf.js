@@ -3,6 +3,7 @@
   const shelf = document.querySelector("[data-siri-shelf]");
   if (!shelf) return;
 
+  const stage = shelf.querySelector(".siri-shelf-stage") || shelf;
   const art = shelf.querySelector("[data-shelf-art]");
   const lightButton = shelf.querySelector("[data-light-toggle]");
   const lightLabel = shelf.querySelector("[data-light-label]");
@@ -36,6 +37,16 @@
       : text[language].choose;
   }
 
+  // Pulled-out book is centred on the shelf niche, whichever slot it came from.
+  function centreSelected() {
+    if (!selected) return;
+    selected.style.removeProperty("--pop-x");
+    const stageBox = shelf.querySelector(".siri-shelf-books").getBoundingClientRect();
+    const slotBox = selected.getBoundingClientRect();
+    const offset = (stageBox.left + stageBox.width / 2) - (slotBox.left + slotBox.width / 2);
+    selected.style.setProperty("--pop-x", `${offset.toFixed(1)}px`);
+  }
+
   function setSide(nextSide) {
     side = nextSide;
     sideButtons.forEach(button => {
@@ -59,6 +70,7 @@
           selected.setAttribute("aria-pressed", "false");
         }
         selected = book;
+        centreSelected();
         selected.classList.add("is-selected");
         selected.setAttribute("aria-pressed", "true");
       }
@@ -71,6 +83,9 @@
       }
     });
   });
+
+  window.addEventListener("resize", centreSelected);
+  if (art && !art.complete) art.addEventListener("load", centreSelected);
 
   sideButtons.forEach(button => button.addEventListener("click", () => {
     if (!selected) {
@@ -85,12 +100,13 @@
     shelf.dataset.lights = turnOff ? "off" : "on";
     art.src = turnOff
       ? "../../assets/shelf/ShelfOff.png"
-      : "../../assets/shelf/Shelf On.png";
+      : "../../assets/shelf/ShelfOn.png";
     art.alt = turnOff
       ? "Rak hiasan Siri Cahaya dengan tanglung tidak menyala"
       : "Rak hiasan Siri Cahaya dengan dua tanglung bercahaya";
     lightButton.setAttribute("aria-pressed", String(!turnOff));
     lightLabel.textContent = turnOff ? text[language].off : text[language].on;
+    centreSelected();
   });
 
   document.querySelectorAll("[data-language]").forEach(button => {
