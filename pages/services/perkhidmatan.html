@@ -75,19 +75,47 @@
 
       <section class="section contact-page-section" id="contact">
         <div class="container">
-          <p class="eyebrow" data-i18n="contact.eyebrow">Hubungi</p>
-          <h2 data-i18n="contact.title">Emy Dahlia Empire</h2>
-          <div class="business-details">
-            <p><strong>Emy Dahlia Empire (EDE)</strong></p>
-            <p>SSM: 003676530-T</p>
-            <p>Malaysia</p>
+          <div class="contact-grid">
+            <div class="contact-copy">
+              <p class="eyebrow" data-i18n="contact.eyebrow">Hubungi</p>
+              <h2 data-i18n="contact.title">Emy Dahlia Empire</h2>
+              <p class="contact-note" data-i18n="contact.note">Untuk pertanyaan atau kolaborasi, sila hubungi melalui akaun media sosial rasmi kami.</p>
+              <div class="business-details">
+                <p><strong>Emy Dahlia Empire (EDE)</strong></p>
+                <p>SSM: 003676530-T</p>
+                <p>Malaysia</p>
+              </div>
+              <div class="social-links official-social-links">
+                <a href="https://www.instagram.com/emydahliaempire/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://www.facebook.com/emydahliaempire/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a href="https://www.tiktok.com/@emydahliaempire" target="_blank" rel="noopener noreferrer">TikTok</a>
+              </div>
+            </div>
+            <form class="contact-form" id="inquiryForm">
+              <label for="name" data-i18n="form.name">Nama anda</label>
+              <input id="name" name="name" type="text" autocomplete="name" required data-i18n-placeholder="form.namePlaceholder" placeholder="Nama" />
+
+              <label for="intent" data-i18n="form.interest">Saya berminat dengan</label>
+              <select id="intent" name="intent" required>
+                <option value="" selected disabled data-i18n="form.select">Sila pilih</option>
+                <option value="Book enquiry" data-project="book" data-i18n="form.book">Pertanyaan buku</option>
+                <option value="Writing Guidance" data-project="guidance" data-i18n="form.guidance">Bimbingan Penulis</option>
+                <option value="Ghost Writer" data-project="ghostwriting" data-i18n="form.ghost">Ghost Writer</option>
+                <option value="Editing and Proofreading" data-project="editing" data-i18n="form.editing">Suntingan &amp; Semakan</option>
+                <option value="Wakaf Cahaya" data-project="wakaf" data-i18n="form.wakaf">Wakaf Cahaya</option>
+                <option value="Collaboration" data-project="collaboration" data-i18n="form.collaboration">Kolaborasi</option>
+                <option value="Media &amp; podcast" data-project="media" data-i18n="form.media">Media &amp; podcast</option>
+                <option value="General enquiry" data-project="general" data-i18n="form.general">Pertanyaan umum</option>
+              </select>
+
+              <label for="details" data-i18n="form.message">Mesej anda</label>
+              <textarea id="details" name="details" required data-i18n-placeholder="form.messagePlaceholder" placeholder="Ceritakan sedikit tentang keperluan anda..."></textarea>
+
+              <button class="button button-gold" type="submit" data-i18n="form.submit">Hantar mesej <span>↗</span></button>
+              <p class="form-note" data-i18n="form.note">Anda akan menyemak mesej anda di WhatsApp sebelum menghantarnya.</p>
+              <p class="fallback-link" id="whatsappFallback" hidden><span data-i18n="form.fallback">WhatsApp tidak dibuka?</span> <a id="manualLink" href="#" target="_blank" rel="noopener noreferrer" data-i18n="form.openMessage">Buka mesej anda di sini.</a></p>
+            </form>
           </div>
-          <div class="social-links official-social-links">
-            <a href="https://www.instagram.com/emydahliaempire/" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="https://www.facebook.com/emydahliaempire/" target="_blank" rel="noopener noreferrer">Facebook</a>
-            <a href="https://www.tiktok.com/@emydahliaempire" target="_blank" rel="noopener noreferrer">TikTok</a>
-          </div>
-          <p class="contact-note" data-i18n="contact.note">Untuk pertanyaan atau kolaborasi, sila hubungi melalui akaun media sosial rasmi kami.</p>
         </div>
       </section>
     </main>

@@ -55,6 +55,7 @@ const translations = {
     "form.book": "Pertanyaan buku",
     "form.guidance": "Bimbingan Penulis",
     "form.ghost": "Ghost Writer",
+    "form.editing": "Suntingan &amp; Semakan",
     "form.wakaf": "Wakaf Cahaya",
     "form.collaboration": "Kolaborasi",
     "form.media": "Media &amp; podcast",
@@ -211,6 +212,7 @@ const translations = {
     "form.book": "Book enquiry",
     "form.guidance": "Writing Guidance",
     "form.ghost": "Ghost Writer",
+    "form.editing": "Editing &amp; Proofreading",
     "form.wakaf": "Wakaf Cahaya",
     "form.collaboration": "Collaboration",
     "form.media": "Media &amp; podcast",
@@ -635,6 +637,13 @@ document.querySelectorAll("[data-interest]").forEach((link) => {
 const form = document.getElementById("inquiryForm");
 const fallback = document.getElementById("whatsappFallback");
 const manualLink = document.getElementById("manualLink");
+const requestedProject = new URLSearchParams(window.location.search).get("project");
+const requestedOption = form
+  ? [...form.querySelectorAll("#intent option")].find(
+      (option) => option.dataset.project === requestedProject,
+    )
+  : null;
+if (requestedOption) requestedOption.selected = true;
 if (form) {
   form.addEventListener("submit", (event) => {
     event.preventDefault();

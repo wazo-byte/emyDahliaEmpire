@@ -1,0 +1,154 @@
+.writing {
+  --writing-gold: #ad8141;
+  --writing-paper: #fff8e9;
+  --writing-ink: #382317;
+  width: min(1280px, calc(100% - 40px));
+  padding-block: 32px 62px;
+  color: var(--writing-ink);
+}
+
+.writing-hero,
+.writing-card,
+.writing-details article {
+  overflow: hidden;
+  border: 1px solid var(--writing-gold);
+  border-radius: 18px;
+  background: var(--writing-paper);
+}
+
+.writing-hero {
+  background: linear-gradient(110deg, #ead4b4, var(--writing-paper));
+}
+
+.writing-hero-copy {
+  max-width: 720px;
+  margin-inline: auto;
+  padding: clamp(24px, 3.5vw, 44px);
+  text-align: center;
+}
+
+.writing-hero h1,
+.writing h2 {
+  margin: 0;
+  font-family: var(--serif);
+  line-height: 1.1;
+}
+
+.writing-hero h1 {
+  font-size: clamp(2.35rem, 4.3vw, 3.5rem);
+}
+
+.writing-subtitle,
+.writing-tagline {
+  font: italic 1.05rem/1.45 var(--serif);
+}
+
+.writing-hero .writing-subtitle {
+  margin-top: 6px;
+  color: #714d2c;
+  font-size: 1.2rem;
+}
+
+.writing-hero .writing-tagline {
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+}
+
+.writing-hero-copy > p:last-child {
+  margin-bottom: 0;
+}
+
+.writing-tagline::after {
+  display: block;
+  width: 56px;
+  margin: 12px auto 0;
+  border-bottom: 1px solid var(--writing-gold);
+  content: "";
+}
+
+.writing-label {
+  display: inline-block;
+  margin: 0 0 10px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #efd39b;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.writing-grid,
+.writing-details {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.writing-card-copy {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 15px;
+  text-align: center;
+}
+
+.writing-card h2 {
+  font-size: clamp(1.45rem, 2.4vw, 2rem);
+}
+
+.writing-card p:not(.writing-label) {
+  margin: 10px 0 0;
+}
+
+.writing .button.gold {
+  border-color: var(--writing-gold);
+  border-radius: 999px;
+  background: linear-gradient(#f4d78d, #ddb467);
+  color: #382317;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.writing .button.gold:hover {
+  background: #efce85;
+}
+
+.writing-card .button {
+  margin-top: auto;
+}
+
+.writing-card-copy > p:last-of-type {
+  padding-bottom: 16px;
+}
+
+.writing-back {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: #714d2c;
+  text-underline-offset: 4px;
+}
+
+.writing-details {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+}
+
+.writing-details article {
+  padding: 22px;
+}
+
+.writing-details h2 {
+  font-size: 1.45rem;
+}
+
+.writing-details p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 760px) {
+  .writing-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -8,7 +8,7 @@
     { key: "nav.books", href: "pages/books/siri-cahaya.html", pages: ["siri-cahaya.html"] },
     {
       key: "nav.ghostwrite",
-      href: "pages/services/ghostwriting.html",
+      href: "pages/services/dunia-penulisan.html",
       pages: ["ghostwriting.html"],
     },
     {
