@@ -25,7 +25,7 @@
      onto the board (y≈943). Lights off: board y=930…970, walls x=119…1088. */
   --floor-bottom: 28.1%;      /* lights on:  gap from stage bottom to where the books stand */
   --cx: 50%;                  /* horizontal centre of the niche */
-  --spine-ratio: 0.06;        /* spine width ÷ height (artwork is 0.0416; a bit fatter so spines stay readable) */
+  --spine-ratio: 0.105;      /* spine width ÷ height (artwork is 0.0416; a bit fatter so spines stay readable) */
   --cover-ratio: 0.675;       /* cover width ÷ height (≈1040 × 1537 cover artwork) */
   --book-gap: 0.7cqw;
   --sel-h: 54cqw;             /* height of the book when pulled out */
